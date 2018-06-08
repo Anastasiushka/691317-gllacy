@@ -16,9 +16,9 @@
                     <li><a href="company.html">О компании</a></li>
                 </ul>
                 <ul class="user-navigation">
-                    <li class="search"><img src="img/Magnifier.svg" width="17" height="17" alt="Поиск"></li>
-                    <li class="login-link"><img src="img/Entrance.svg" width="21" height="19" alt="Вход">Вход</li>
-                    <li class="trolley full-trolley"><img src="img/Trolley_full.svg" width="21" height="20" alt="Полная тележка">2 товара</li>
+                    <li class="search"><button><img src="img/Magnifier.svg" width="17" height="17" alt="Поиск"></button></li>
+                    <li class="login-link"><button><img src="img/Entrance.svg" width="21" height="19" alt="Вход">Вход</button></li>
+                    <li class="trolley full-trolley"><button><img src="img/Trolley_full.svg" width="21" height="20" alt="Полная тележка">2 товара</button></li>
                 </ul>
                 <p>
                     С 10 до 20, ежедневно
@@ -37,7 +37,77 @@
             <section class="catalog">
                 <div class="filters">
                     <h2 class="visually-hidden">Фильтр товаров</h2>
-                    <!-- Здесь будет форма -->
+                    <div class="catalog-filter-form">
+                        <form action="#" method="post">
+                            <label class="catalog-filter-form-popularity">
+                                Сортировка:
+                                <select name="popularity">
+                                    <option selected>по популярности</option>
+                                    <option>сначала недорогие</option>
+                                    <option>сначала дорогие</option>
+                                    <option>по жирности</option>
+                                </select>
+                            </label>
+                            <div class="catalog-filter-form-fat-price">
+                                <p>Цена: 100 руб.-500 руб.</p>
+                                <div class="catalog-filter-form-fat-price-circle-1">
+                                    <img src="img/filter-button.svg" width="20" height="22">
+                                </div>
+                                <div class="catalog-filter-form-fat-price-circle-2">
+                                    <img src="img/filter-button.svg" width="20" height="22">
+                                </div>
+                                <div class="catalog-filter-form-fat-price-line">
+                                    <img src="img/line.svg" width="176" height="4">
+                                </div>
+                                <div class="catalog-filter-form-fat-price-line-in-the-center">
+                                    <img src="img/line-in-the-center.svg" width="106" height="4">
+                                </div>
+                            </div>
+                            <span class="catalog-filter-form-fat-content">
+                                <p>Жирность:</p>
+                                <label>
+                                    <input type="radio" name="fat-content" value="0%">
+                                    0%
+                                </label>
+                                <label>
+                                    <input type="radio" name="fat-content" value="до 10%" checked>
+                                    до 10%
+                                </label>
+                                <label>
+                                    <input type="radio" name="fat-content" value="до 30%">
+                                    до 30%
+                                </label>
+                                <label>
+                                    <input type="radio" name="fat-content" value="выше 30%">
+                                    выше 30%
+                                </label>
+                            </span>
+                            <span class="catalog-filter-form-fillers">
+                                <p>Наполнители:</p>
+                                <label>
+                                    <input type="checkbox" checked>
+                                    шоколадные
+                                </label>
+                                <label>
+                                    <input type="checkbox" checked>
+                                    сахарные присыпки
+                                </label>
+                                <label>
+                                    <input type="checkbox">
+                                    фрукты
+                                </label>
+                                <label>
+                                    <input type="checkbox">
+                                    сиропы
+                                </label>
+                                <label>
+                                    <input type="checkbox">
+                                    джемы
+                                </label>
+                            </span>
+                            <button class="button button-catalog-filter-form" type="submit">Применить</button>
+                        </form>
+                    </div>
                 </div>
                 <h2 class="visually-hidden">Каталог мороженого</h2>
                 <ul class="catalog-list">
@@ -237,6 +307,7 @@
 
         <footer class="main-footer">
             <div class="footer-social">
+                <h4 class="visually-hidden">Мы есть в социальных сетях</h4>
                 <ul>
                     <li><a class="social-button" href="#"><img src="img/Twitter.svg" width="32" height="32" alt="Твиттер"></a></li>
                     <li><a class="social-button" href="#"><img src="img/Instagram.svg" width="32" height="32" alt="Инстаграм"></a></li>
@@ -244,6 +315,7 @@
                     <li><a class="social-button" href="#"><img src="img/Vk.svg" width="32" height="32" alt="Вконтакте"></a></li>
                 </ul>
             </div>
+            <h4 class="visually-hidden">Дополнительная информация</h4>
             <ul class="info">
                 <li class="info-link">
                     <img src="img/Heart.svg" width="15" height="13" alt="Сердечко">
@@ -270,6 +342,7 @@
         </footer>
 
         <section class=" modal modal-cart">
+            <h2 class="visually-hidden">Корзина</h2>
             <table class="modal modal-shopping-cart">
                 <tr>
                     <td>
@@ -302,18 +375,31 @@
                     </td>
                 </tr>
             </table>
-            <button class="button button-cart">Оформить заказ</button>
+            <button class="button button-cart" type="submit">Оформить заказ</button>
         </section>
 
         <section class="modal modal-login">
             <h2 class="visually-hidden">Вход на сайт</h2>
-            <!-- Здесь будет форма -->
+            <div class="login-form">
+                <form action="#" method="post">
+                    <label for="email-entrance" class="visually-hidden">Электронная почта</label>
+                    <input id="email-entrance" type="email" placeholder="Электронная почта">
+                    <label for="password-entrance" class="visually-hidden">Пароль</label>
+                    <input id="password-entrance" type="password" placeholder="Пароль">
+                    <button class="button button-subscription" type="submit">Войти</button>
+                </form>
+            </div>
             <a class="forgotten-password" href="#">Забыли пароль?</a>
             <a class="new-registration" href="#">Новая регистрация</a>
         </section>
 
         <div class=" modal modal-searching-form">
-            <!-- Здесь будет форма -->
+            <h2 class="visually-hidden">Форма поиска</h2>
+            <div class="searching-form">
+                <form action="#" method="post">
+                    <input type="search" placeholder="Что ищем?">
+                </form>
+            </div>
         </div>
     </body>
 </html>

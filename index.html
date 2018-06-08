@@ -16,9 +16,9 @@
                     <li><a href="company.html">О компании</a></li>
                 </ul>
                 <ul class="user-navigation">
-                    <li class="search"><img src="img/Magnifier.svg" width="17" height="17" alt="Поиск"></li>
-                    <li class="login-link"><img src="img/Entrance.svg" width="21" height="19" alt="Вход">Вход</li>
-                    <li class="trolley empty-trolley"><img src="img/Trolley_empty.svg" width="21" height="20" alt="Пустая тележка">Пусто</li>
+                    <li class="search"><a href="#"><img src="img/Magnifier.svg" width="17" height="17" alt="Поиск"></a></li>
+                    <li class="login-link"><a href="#"><img src="img/Entrance.svg" width="21" height="19" alt="Вход">Вход</a></li>
+                    <li class="trolley empty-trolley"><a href="#"><img src="img/Trolley_empty.svg" width="21" height="20" alt="Пустая тележка">Пусто</a></li>
                 </ul>
                 <p>
                     С 10 до 20, ежедневно
@@ -27,13 +27,32 @@
             </nav>
         </header>
         <main class="container">
-            <section class="slider">
-                <h2 class="visually-hidden">Горящее предложение</h2>
-                <p>
-                    Крем-брюле и пломбир
-                    с малиновым джемом
-                </p>
-                <button class=" button button-jam">Давайте оба!</button>
+            <h1 class="visually-hidden">Магазин мороженого Глейси</h1>
+            <section class="sliders">
+                <div class="slider-1">
+                    <h2 class="visually-hidden">Горящее предложение 1</h2>
+                    <p>
+                        Крем-брюле и пломбир
+                        с малиновым джемом
+                    </p>
+                    <button class=" button button-jam">Давайте оба!</button>
+                </div>
+                <div class="slider-2">
+                    <h2 class="visually-hidden">Горящее предложение 2</h2>
+                    <p>
+                        Шоколадный пломбир
+                        и лимонный сорбет
+                    </p>
+                    <button class=" button button-jam">Давайте оба!</button>
+                </div>
+                <div class="slider-3">
+                    <h2 class="visually-hidden">Горящее предложение 3</h2>
+                    <p>
+                        Пломбир с помадкой
+                        и клубничный щербет
+                    </p>
+                    <button class=" button button-jam">Давайте оба!</button>
+                </div>
             </section>
 
             <section class="promotion">
@@ -54,7 +73,6 @@
                 <h2 class="visually-hidden">Хит продаж</h2>
                 <ul class="hit-list">
                     <li class="hit-item">
-                        <img class="hit-item-image-hit" src="img/Hit.png" width="61" height="61" alt="Хит">
                         <a class="hit-item-image" href="#">
                             <img src="img/ice_cream_1.jpg" width="267" height="267" alt="Фото сливочного мороженого с апельсиновым джемом и цитрусовой стружкой">
                         </a>
@@ -70,7 +88,6 @@
                         </p>
                     </li>
                     <li class="hit-item">
-                        <img class="hit-item-image-hit" src="img/Hit.png" width="61" height="61" alt="Хит">
                         <a class="hit-item-image" href="#">
                             <img src="img/ice_cream_2.jpg" width="267" height="267" alt="Фото сливочно-кофейного мороженого с кусочками шоколада">
                         </a>
@@ -86,7 +103,6 @@
                         </p>
                     </li>
                     <li class="hit-item">
-                        <img class="hit-item-image-hit" src="img/Hit.png" width="61" height="61" alt="Хит">
                         <a class="hit-item-image" href="#">
                             <img src="img/ice_cream_3.jpg" width="267" height="267" alt="Фото сливочно-клубничного мороженого с присыпкой из белого шоколада">
                         </a>
@@ -102,7 +118,6 @@
                         </p>
                     </li>
                     <li class="hit-item">
-                        <img class="hit-item-image-hit" src="img/Hit.png" width="61" height="61" alt="Хит">
                         <a class="hit-item-image" href="#">
                             <img src="img/ice_cream_4.jpg" width="267" height="267" alt="Фото сливочного крем-брюле с карамельной подливкой">
                         </a>
@@ -157,7 +172,13 @@
                     всего самого вкусного, что у нас происходит. Обещаем не спамить
                     и не слать всякой ненужной ерунды. Честно =)
                 </p>
-                <!-- Здесь будет форма -->
+                <div class="subscription-form">
+                    <form action="#" method="post">
+                        <label for="email-subscription" class="visually-hidden">Электронная почта</label>
+                        <input id="email-subscription" name="email-subscription" type="email" placeholder="Электронная почта">
+                        <button class="button button-subscription" type="submit">Отправить</button>
+                    </form>
+                </div>
             </div>
 
             <section class="location">
@@ -191,13 +212,14 @@
                             (с 10 до 20 ежедневно)
                         </span>
                     </p>
-                    <!-- Здесь будет форма -->
+                    <a href="#" class="button button-location">Форма обратной связи</a>
                 </div>
             </section>
         </main>
 
         <footer class="main-footer">
             <div class="footer-social">
+                <h4 class="visually-hidden">Мы есть в социальных сетях</h4>
                 <ul>
                     <li><a class="social-button" href="#"><img src="img/Twitter.svg" width="32" height="32" alt="Твиттер"></a></li>
                     <li><a class="social-button" href="#"><img src="img/Instagram.svg" width="32" height="32" alt="Инстаграм"></a></li>
@@ -205,6 +227,7 @@
                     <li><a class="social-button" href="#"><img src="img/Vk.svg" width="32" height="32" alt="Вконтакте"></a></li>
                 </ul>
             </div>
+            <h4 class="visually-hidden">Дополнительная информация</h4>
             <ul class="info">
                 <li class="info-link">
                     <img src="img/Heart.svg" width="15" height="13" alt="Сердечко">
@@ -235,7 +258,7 @@
             <a href="#"><b>Новинки</b></a>
             <hr>
             <ul class="modal-main-menu-list">
-                <li class="modal-main-menu-item"><a href="#">Сливочное</a></li>
+                <li class="modal-main-menu-item"><a href="catalog.html">Сливочное</a></li>
                 <li class="modal-main-menu-item"><a href="#">Щербеты</a></li>
                 <li class="modal-main-menu-item"><a href="#">Фруктовый лед</a></li>
                 <li class="modal-main-menu-item"><a href="#">Мелорин</a></li>
@@ -244,18 +267,43 @@
 
         <section class="modal modal-login">
             <h2 class="visually-hidden">Вход на сайт</h2>
-            <!-- Здесь будет форма -->
+            <div class="login-form">
+                <form action="#" method="post">
+                    <label for="email-entrance" class="visually-hidden">Электронная почта</label>
+                    <input id="email-entrance" type="email" placeholder="Электронная почта">
+                    <label for="password-entrance" class="visually-hidden">Пароль</label>
+                    <input id="password-entrance" type="password" placeholder="Пароль">
+                    <button class="button button-subscription" type="submit">Войти</button>
+                </form>
+            </div>
             <a class="forgotten-password" href="#">Забыли пароль?</a>
             <a class="new-registration" href="#">Новая регистрация</a>
         </section>
 
         <div class=" modal modal-searching-form">
-            <!-- Здесь будет форма -->
+            <h2 class="visually-hidden">Форма поиска</h2>
+            <div class="searching-form">
+                <form action="#" method="post">
+                    <input type="search" placeholder="Что ищем?">
+                </form>
+            </div>
         </div>
 
         <section class="modal modal-feedback-form">
             <h2>Мы обязательно вам ответим!</h2>
-            <!--  -->
+            <h3 class="visually-hidden">Форма обратной связи</h3>
+            <div class="feedback-form">
+                <form action="#" method="post">
+                    <label for="name-feedback" class="visually-hidden">Имя</label>
+                    <input id="name-feedback" type="email" placeholder="Как вас зовут?">
+                    <label for="email-feedback" class="visually-hidden">Электронная почта</label>
+                    <input id="email-feedback" type="password" placeholder="Ваша почта для ответа?">
+                    <label for="message-feedback" class="visually-hidden">Ваше сообщение</label>
+                    <textarea id="message-feedback" name="message-feedback" rows="7" cols="#" placeholder="Напишите что-нибудь...">
+                    </textarea>
+                    <button class="button button-feedback" type="submit">Отправить</button>
+                </form>
+            </div>
         </section>
     </body>
 </html>
