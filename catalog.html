@@ -48,63 +48,41 @@
                                     <option>по жирности</option>
                                 </select>
                             </label>
-                            <div class="catalog-filter-form-fat-price">
-                                <p>Цена: 100 руб.-500 руб.</p>
-                                <div class="catalog-filter-form-fat-price-circle-1">
-                                    <img src="img/filter-button.svg" width="20" height="22">
+                            <fieldset class="catalog-filter-form-price">
+                                <legend>Цена: 100 руб.-500 руб.</legend>
+                                <div class="catalog-filter-form-price-circle-1">
                                 </div>
-                                <div class="catalog-filter-form-fat-price-circle-2">
-                                    <img src="img/filter-button.svg" width="20" height="22">
+                                <div class="catalog-filter-form-price-circle-2">
                                 </div>
-                                <div class="catalog-filter-form-fat-price-line">
-                                    <img src="img/line.svg" width="176" height="4">
+                                <div class="catalog-filter-form-price-line">
                                 </div>
-                                <div class="catalog-filter-form-fat-price-line-in-the-center">
-                                    <img src="img/line-in-the-center.svg" width="106" height="4">
+                                <div class="catalog-filter-form-price-line-in-the-center">
                                 </div>
-                            </div>
-                            <span class="catalog-filter-form-fat-content">
-                                <p>Жирность:</p>
-                                <label>
-                                    <input type="radio" name="fat-content" value="0%">
-                                    0%
-                                </label>
-                                <label>
-                                    <input type="radio" name="fat-content" value="до 10%" checked>
-                                    до 10%
-                                </label>
-                                <label>
-                                    <input type="radio" name="fat-content" value="до 30%">
-                                    до 30%
-                                </label>
-                                <label>
-                                    <input type="radio" name="fat-content" value="выше 30%">
-                                    выше 30%
-                                </label>
-                            </span>
-                            <span class="catalog-filter-form-fillers">
-                                <p>Наполнители:</p>
-                                <label>
-                                    <input type="checkbox" checked>
-                                    шоколадные
-                                </label>
-                                <label>
-                                    <input type="checkbox" checked>
-                                    сахарные присыпки
-                                </label>
-                                <label>
-                                    <input type="checkbox">
-                                    фрукты
-                                </label>
-                                <label>
-                                    <input type="checkbox">
-                                    сиропы
-                                </label>
-                                <label>
-                                    <input type="checkbox">
-                                    джемы
-                                </label>
-                            </span>
+                            </fieldset>
+                            <fieldset class="catalog-filter-form-fat-content">
+                                <legend>Жирность:</legend>
+                                <input id="zero" type="radio" name="fat-content" value="0%">
+                                <label for="zero">0%</label>
+                                <input id="ten" type="radio" name="fat-content" value="до 10%" checked>
+                                <label for="ten">до 10%</label>
+                                <input id="thirty" type="radio" name="fat-content" value="до 30%">
+                                <label for="thirty">до 30%</label>
+                                <input id="forty" type="radio" name="fat-content" value="выше 30%">
+                                <label for="forty">выше 30%</label>
+                            </fieldset>
+                            <fieldset class="catalog-filter-form-fillers">
+                                <legend>Наполнители:</legend>
+                                <input id="choco" type="checkbox" checked>
+                                <label for="choco">шоколадные</label>
+                                <input id="sugar" type="checkbox" checked>
+                                <label for="sugar">сахарные присыпки</label>
+                                <input id="fruits" type="checkbox">
+                                <label for="fruits">фрукты</label>
+                                <input id="syrups" type="checkbox">
+                                <label for="syrups">сиропы</label>
+                                <input id="jems" type="checkbox">
+                                <label for="jems">джемы</label>
+                            </fieldset>
                             <button class="button button-catalog-filter-form" type="submit">Применить</button>
                         </form>
                     </div>
