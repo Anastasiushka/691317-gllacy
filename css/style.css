@@ -1,0 +1,498 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 1200px;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #ffffff;
+    background-color: #849d8f;
+    background-image: url("../img/Slider-1.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+.inner-page {
+    background-image: url("../img/Backlight-catalog.png");
+}
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+a:hover,
+a:active {
+    color: #ffbc9e;
+}
+.site-navigation {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+    list-style: none;
+    text-decoration: underline;
+}
+.user-navigation {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    list-style: none;
+}
+.main-navigation a {
+    color: #ffffff;
+}
+.main-navigation a:hover,
+.main-navigation a:focus {
+    color: #333333;
+    background-color: rgb(247, 246, 243);
+}
+.main-navigation a:active {
+    color: #333333;
+    background-color: rgba(248, 247, 244, 0.988);
+    box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004); /* Не работает, не понимаю почему */
+}
+.site-navigation-current {
+    background-color: #d07058;
+}
+.main-navigation p {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+}
+.main-navigation p b {
+    font-size: 22px;
+    line-height: 24px;
+}
+.sliders p {
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 700;
+}
+.button {
+    font: inherit;
+    text-align: center;
+    vertical-align: middle;
+    color: #ffffff;
+    background-image: linear-gradient(360deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
+    box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+    border: none;
+    border-radius: 60px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+}
+.button:hover,
+.button:focus {
+    background-image: linear-gradient(360deg, rgba(231, 74, 53, 0.8) 0%, rgba(242, 104, 67, 0.8) 100%);
+    box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
+}
+.button:active {
+    background-image: linear-gradient(180deg, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
+    box-shadow: inset 0px -2px 2px 0px rgba(148, 39, 24, 0.004);
+}
+
+
+.button-jam {
+    width: 278px;
+    height: 63px;
+    font-size: 32px;
+    line-height: 44px;
+}
+.button-promotion-rasp {
+    width: 165px;
+    height: 46px;
+}
+.button-promotion-choco {
+    width: 189px;
+    height: 45px;
+}
+.button-subscription {
+    width: 128px;
+    height: 43px;
+}
+.button-location {    /* Размеры кнопки не соответствуют написанным здесь, не понятно... */
+    width: 251px;
+    height: 43px;
+}
+.button-subscription {
+    width: 100px;
+    height: 44px;
+}
+.button-feedback {
+    width: 138px;
+    height: 43px;
+}
+.button-catalog-filter-form {
+    width: 143px;
+    height: 36px;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.188);
+    border-radius: 60px;
+}
+.button-catalog-filter-form:hover,
+.button-catalog-filter-form:focus {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    color: #323232;
+}
+.button-catalog-filter-form:active {
+    background-color: rgb(237, 237, 237);
+    box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
+    border: none;
+    color: #323232;
+}
+.raspberries {
+    background-color: #69182c;
+    background-image: url("../img/Raspberries-background.jpg");
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    width: 560px;
+    height: 230px;
+}
+.chocolate {
+    background-color: #3f2519;
+    background-image: url("../img/Chocolate-background.jpg");
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    width: 560px;
+    height: 230px;
+}
+.promotion h3 {
+    font-size: 35px;
+    line-height: 41px;
+    font-weight: 700;
+}
+.promotion p {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+}
+.hit ul {
+    list-style: none;
+}
+.hit-item-image img {
+    border-radius: 50%;
+}
+.hit-item-price {
+    line-height: 45px;
+    font-weight: 700;
+}
+.hit-item-description a {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+    text-decoration: underline;
+}
+.shop-description{
+    background-color: #ecdebe;
+    background-image: url("../img/Waffle-pattern.jpg");
+    border-radius: 15px;
+    width: 1150px;
+    height: 310px;
+}
+.shop-description h2 {
+    color: #323232;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+}
+.shop-description-list {
+    list-style: none;
+    color: #323232;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+}
+.news {
+    background-color: #f1c5ca;
+    background-image: url("../img/Strawberry-background.jpg");
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    width: 560px;
+    height: 220px;
+}
+.news h4 {
+    color: #323232;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+}
+.news a {
+    color: #323232;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    text-decoration: underline;
+}
+.subscription{
+    background-image: url("../img/Post-background.svg");
+    background-repeat: no-repeat;
+    width: 560px;
+    height: 220px;
+}
+.subscription p{
+    color: #5a5a5a;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+}
+.subscription-form input {
+    font: inherit;
+    background-color: rgba(255, 255, 255, 0.52);
+    border: 1px solid rgba(178, 178, 178, 0.52);
+    width: 368px;
+    height: 44px;
+}
+.map {
+    background-image: url("../img/Map.jpg");
+    background-repeat: no-repeat;
+    width: 1200px;
+    height: 430px;
+}
+.address {
+    background-color: rgba(255, 255, 255, 0.98);
+    border-radius: 15px;
+    width: 302px;
+    height: 305px;
+}
+.address p {
+    color: #323232;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+}
+.address b {
+    color: #323232;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+}
+.info {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    text-decoration: underline;
+    list-style: none;
+}
+.info li:first-child {
+    font-weight: 700;
+}
+.footer-social ul {
+    list-style: none;
+}
+.footer-copyright p {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+}
+.footer-copyright a {
+    text-decoration: underline;
+}
+.modal {
+    background-color: rgb(248, 247, 244);
+}
+.modal-main-menu {
+    border-radius: 5px;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+    width: 143px;
+    height: 171px;
+}
+.modal-main-menu b {
+    color: #323232;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+}
+.modal-main-menu a:focus,
+.modal-main-menu a:hover {
+    background-color: rgb(251, 222, 215);
+    width: 143px;
+    height: 28px;
+}
+.modal-main-menu a:active {
+    background-color: rgb(246, 181, 165);
+    width: 143px;
+    height: 28px;
+}
+.modal-main-menu-item-current {
+    background-color: rgb(208, 112, 88);
+    width: 143px;
+    height: 28px;
+}
+.modal-main-menu-list a {
+    color: #323232;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+}
+.modal-main-menu ul {
+    list-style: none;
+}
+.modal-login {
+    border-radius: 6px;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+    width: 277px;
+    height: 214px;
+}
+.modal-login input {
+    font: inherit;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(211, 211, 210);
+    border-radius: 5px;
+    width: 245px;
+    height: 48px;
+}
+.modal-login a {
+    color: #323232;
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 400;
+    text-decoration: underline;
+}
+.modal-searching-form {
+    border-radius: 6px;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+    width: 341px;
+    height: 84px;
+}
+.searching-form input {
+    font: inherit;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(211, 211, 210);
+    border-radius: 5px;
+    width: 315px;
+    height: 48px;
+}
+.modal-feedback-form {
+    border-radius: 10px;
+    width: 478px;
+    height: 443px;
+}
+.modal-feedback-form h2 {
+    color: #323232;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 500;
+}
+.feedback-form input{
+    font: inherit;
+    background-color: rgba(255, 255, 255, 0.52);
+    border: 1px solid rgba(178, 178, 178, 0.52);
+    border-radius: 5px;
+    width: 271px;
+    height: 48px;
+}
+.feedback-form textarea {
+    font: inherit;
+    background-color: rgba(255, 255, 255, 0.52);
+    border: 1px solid rgba(178, 178, 178, 0.52);
+    border-radius: 5px;
+    width: 432px;
+    height: 159px;
+}
+.modal-cart {
+    border-radius: 5px;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+    width: 540px;
+    height: 242px;
+}
+.modal-cart td {
+    color: #323232;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
+}
+.modal-cart td:last-child {
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 700;
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+ul.breadcrumbs {
+    list-style: none;
+}
+.breadcrumbs a {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+}
+h1.page-title {
+    font-size: 35px;
+    line-height: 41px;
+    font-weight: 700;
+}
+.catalog-filter-form legend,
+label.catalog-filter-form-popularity {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+}
+.catalog-filter-form label,
+.catalog-filter-form option {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+}
+.catalog-filter-form-popularity option {
+    font: inherit;
+    color: #323232;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+}
+.catalog-filter-form-popularity option:active {    /* Не получается настроить сортировку по популярности, как на макете   */
+    color: #323232;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+}
+ul.catalog-list {
+    list-style: none;
+}
+.catalog-item-image img {
+    border-radius: 50%;
+}
+.catalog-item-price {
+    line-height: 45px;
+    font-weight: 700;
+}
+.catalog-item p {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+    text-decoration: underline;
+}
+ul.pagination-list {
+    list-style: none;
+}
+.pagination-list a{
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+}
+.pagination-item-current a {
+    color: #323232;
+    background-color: rgb(255, 255, 255); /*  Подложка под номером страницы овальная вместо круглой...не понятно...  */
+    border-radius: 50%;
+    width: 27px;
+    height: 26px;
+}
+.pagination-list a:disabled {
+    color: #8ea598;
+}
+
+
