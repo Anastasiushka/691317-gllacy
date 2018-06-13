@@ -108,7 +108,8 @@ a:active {
     width: 128px;
     height: 43px;
 }
-.button-location {    /* Размеры кнопки не соответствуют написанным здесь, не понятно... */
+.button-location {
+    display: block;   
     width: 251px;
     height: 43px;
 }
@@ -485,8 +486,9 @@ ul.pagination-list {
     font-weight: 500;
 }
 .pagination-item-current a {
+    display: block;
     color: #323232;
-    background-color: rgb(255, 255, 255); /*  Подложка под номером страницы овальная вместо круглой...не понятно...  */
+    background-color: rgb(255, 255, 255); 
     border-radius: 50%;
     width: 27px;
     height: 26px;
