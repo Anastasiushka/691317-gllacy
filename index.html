@@ -12,18 +12,18 @@
             <nav class="main-navigation">
                 <img src="img/Logo.svg" width="154" height="64" alt="Логотип Gllacy Shop">
                 <ul class="site-navigation">
-                    <li><a href="catalog.html">Каталог</a></li>
-                    <li><a href="#">Доставка и оплата</a></li>
-                    <li><a href="#">О компании</a></li>
+                    <li><a class="navigation" href="catalog.html">Каталог</a></li>
+                    <li><a class="navigation" href="#">Доставка и оплата</a></li>
+                    <li><a class="navigation" href="#">О компании</a></li>
                 </ul>
                 <ul class="user-navigation">
-                    <li class="search"><a href="#"><img src="img/Magnifier.svg" width="17" height="17" alt="Поиск"></a></li>
-                    <li class="login-link"><a href="#"><img src="img/Entrance.svg" width="21" height="19" alt="Вход">Вход</a></li>
-                    <li class="trolley empty-trolley"><a href="#"><img src="img/Trolley-empty.svg" width="21" height="20" alt="Пустая тележка">Пусто</a></li>
+                    <li class="search"><a class="navigation" href="#"><img src="img/Magnifier.svg" width="17" height="17" alt="Поиск"></a></li>
+                    <li class="login-link"><a class="navigation" href="#"><img src="img/Entrance.svg" width="21" height="19" alt="Вход">Вход</a></li>
+                    <li class="trolley empty-trolley"><a class="navigation" href="#"><img src="img/Trolley-empty.svg" width="21" height="20" alt="Пустая тележка">Пусто</a></li>
                 </ul>
                 <p>
                     С 10 до 20, ежедневно
-                    <a href="tel: 88124502525"><b>8 812 450-25-25</b></a>
+                    <a href="tel:88124502525"><b>8 812 450-25-25</b></a>
                 </p>
             </nav>
         </header>
@@ -38,7 +38,7 @@
                     </p>
                     <button class="button button-jam">Давайте оба!</button>
                 </div>
-                <div class="slider-2">
+                <div class="slider-2 visually-hidden">
                     <h2 class="visually-hidden">Горящее предложение 2</h2>
                     <p>
                         Шоколадный пломбир
@@ -46,7 +46,7 @@
                     </p>
                     <button class="button button-jam">Давайте оба!</button>
                 </div>
-                <div class="slider-3">
+                <div class="slider-3 visually-hidden">
                     <h2 class="visually-hidden">Горящее предложение 3</h2>
                     <p>
                         Пломбир с помадкой
@@ -166,17 +166,19 @@
             </article>
 
             <div class="subscription">
-                <p>
-                    Подпишитесь на нашу сладкую рассылку и будете всегда в курсе
-                    всего самого вкусного, что у нас происходит. Обещаем не спамить
-                    и не слать всякой ненужной ерунды. Честно =)
-                </p>
-                <div class="subscription-form">
-                    <form action="#" method="post">
-                        <label for="email-subscription" class="visually-hidden">Электронная почта</label>
-                        <input id="email-subscription" name="email-subscription" type="email" placeholder="Электронная почта">
-                        <button class="button button-subscription" type="submit">Отправить</button>
-                    </form>
+                <div class="subscription-inner">
+                    <p>
+                        Подпишитесь на нашу сладкую рассылку и будете всегда в курсе
+                        всего самого вкусного, что у нас происходит. Обещаем не спамить
+                        и не слать всякой ненужной ерунды. Честно =)
+                    </p>
+                    <div class="subscription-form">
+                        <form action="#" method="post">
+                            <label for="email-subscription" class="visually-hidden">Электронная почта</label>
+                            <input id="email-subscription" name="email-subscription" type="email" placeholder="Электронная почта">
+                            <button class="button button-subscription" type="submit">Отправить</button>
+                        </form>
+                    </div>
                 </div>
             </div>
 
@@ -243,7 +245,7 @@
             </ul>
             <div class="footer-copyright">
                 <a class="ha-logo" href="https://htmlacademy.ru/intensive/htmlcss">
-                    <img src="img/Logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип HTML Academy">
+                    <img src="img/Logo-htmlacademy.svg" width="108" height="39" alt="Логотип HTML Academy">
                 </a>
                 <p>
                     Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> 2017

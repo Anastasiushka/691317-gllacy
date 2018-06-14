@@ -27,8 +27,10 @@ a:active {
     font-size: 16px;
     line-height: 18px;
     font-weight: 700;
-    list-style: none;
-    text-decoration: underline;
+    list-style: none;   
+}
+.site-navigation a {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 .user-navigation {
     font-size: 14px;
@@ -39,17 +41,20 @@ a:active {
 .main-navigation a {
     color: #ffffff;
 }
-.main-navigation a:hover,
-.main-navigation a:focus {
+a.navigation:hover,
+a.navigation:focus {
+    border-radius: 25px;
     color: #333333;
     background-color: rgb(247, 246, 243);
 }
-.main-navigation a:active {
+a.navigation:active {
+    border-radius: 25px;
     color: #333333;
-    background-color: rgba(248, 247, 244, 0.988);
-    box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004); /* Не работает, не понимаю почему */
+    background-color: rgb(237, 237, 237);
+    box-shadow: inset 0px 2px 1px 0px rgb(105, 105, 105);
 }
-.site-navigation-current {
+.site-navigation-current a {
+    border-radius: 25px;
     background-color: #d07058;
 }
 .main-navigation p {
@@ -78,6 +83,7 @@ a:active {
     font-size: 18px;
     line-height: 24px;
     font-weight: 700;
+    cursor: pointer;
 }
 .button:hover,
 .button:focus {
@@ -181,19 +187,22 @@ a:active {
 .hit-item-price {
     line-height: 45px;
     font-weight: 700;
+    font-size: 45px;
+    text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 .hit-item-description a {
     font-size: 16px;
     line-height: 22px;
     font-weight: 500;
-    text-decoration: underline;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 .shop-description{
     background-color: #ecdebe;
     background-image: url("../img/Waffle-pattern.jpg");
     border-radius: 15px;
     width: 1150px;
-    height: 310px;
+    min-height: 310px;
+    height: auto;
 }
 .shop-description h2 {
     color: #323232;
@@ -214,7 +223,8 @@ a:active {
     background-repeat: no-repeat;
     border-radius: 15px;
     width: 560px;
-    height: 220px;
+    min-height: 220px;
+    height: auto;
 }
 .news h4 {
     color: #323232;
@@ -225,15 +235,25 @@ a:active {
 .news a {
     color: #323232;
     font-size: 24px;
-    line-height: 30px;
+    line-height: 33px;
     font-weight: 700;
-    text-decoration: underline;
+    border-bottom: 3px solid rgb(50, 50, 50);
+    background-color: rgba(255, 255, 255, 0.8);
 }
 .subscription{
     background-image: url("../img/Post-background.svg");
     background-repeat: no-repeat;
     width: 560px;
-    height: 220px;
+    min-height: 220px;
+    height: auto;
+    border-radius: 10px;
+    padding: 5px;
+}
+.subscription-inner {
+    border-radius: 10px;
+    background-color: rgb(248, 247, 244);
+    width: 550px;
+    height: 210px;
 }
 .subscription p{
     color: #5a5a5a;
@@ -276,8 +296,10 @@ a:active {
     font-size: 13px;
     line-height: 18px;
     font-weight: 400;
-    text-decoration: underline;
     list-style: none;
+}
+.info a {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 .info li:first-child {
     font-weight: 700;
@@ -290,8 +312,8 @@ a:active {
     line-height: 18px;
     font-weight: 400;
 }
-.footer-copyright a {
-    text-decoration: underline;
+.footer-copyright p a {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 .modal {
     background-color: rgb(248, 247, 244);
@@ -394,6 +416,7 @@ a:active {
     border-radius: 5px;
     width: 432px;
     height: 159px;
+    resize: none;
 }
 .modal-cart {
     border-radius: 5px;
@@ -425,10 +448,13 @@ a:active {
 ul.breadcrumbs {
     list-style: none;
 }
-.breadcrumbs a {
+.breadcrumbs li {
     font-size: 14px;
     line-height: 16px;
     font-weight: 400;
+}
+.breadcrumbs a {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 h1.page-title {
     font-size: 35px;
@@ -447,18 +473,43 @@ label.catalog-filter-form-popularity {
     line-height: 18px;
     font-weight: 500;
 }
-.catalog-filter-form-popularity option {
-    font: inherit;
-    color: #323232;
-    font-size: 14px;
-    line-height: 16px;
-    font-weight: 400;
+.catalog-filter-form select {
+    width: 194px;
+    height: 37px;
+    border: none;
+    border-radius: 25px;
+    background-color: rgba(248, 247, 244, 0.2);
+    background-image: url("../img/Icon-down-dir.svg");
+    background-position: right center;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    /*for WebKit*/
+    -webkit-appearance: none;
+    /* for FF */
+    -moz-appearance: none;
+    text-indent: 0.01px; 
+    text-overflow: '';
+    /* for IE */
+    -ms-appearance: none;
+    appearance: none;
 }
-.catalog-filter-form-popularity option:active {    /* Не получается настроить сортировку по популярности, как на макете   */
+.catalog-filter-form select::-ms-expand {
+    display: none;
+}
+.catalog-filter-form select:focus {
     color: #323232;
     font-size: 16px;
     line-height: 18px;
     font-weight: 500;
+}
+.catalog-filter-form select:focus option{
+    color: #323232;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
 }
 ul.catalog-list {
     list-style: none;
@@ -469,12 +520,14 @@ ul.catalog-list {
 .catalog-item-price {
     line-height: 45px;
     font-weight: 700;
+    font-size: 45px;
+    text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
-.catalog-item p {
+.catalog-item p a {
     font-size: 16px;
     line-height: 22px;
     font-weight: 500;
-    text-decoration: underline;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 ul.pagination-list {
     list-style: none;
@@ -498,3 +551,7 @@ ul.pagination-list {
 }
 
 
+._355_____кг_копия {
+  font-size: 45px;
+  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+}
