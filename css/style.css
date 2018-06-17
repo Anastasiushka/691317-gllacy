@@ -1,5 +1,5 @@
 body {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     width: 1200px;
     font-family: "Roboto", "Arial", sans-serif;
@@ -13,8 +13,6 @@ body {
     background-repeat: no-repeat;
 }
 .inner-page {
-    margin: 0;
-    padding: 0;
     background-image: url("../img/Backlight-catalog.png");
 }
 a {
@@ -618,18 +616,21 @@ body {
     flex-grow: 0;
     flex-shrink: 0;
     display: flex;
-    justify-content: space-between;
+    
 
     /*Временно для сетки*/
     min-height: 40px;
     background-color: rgba(241, 204, 180, 0.3);
+}
+.site-navigation li {
+    margin-right: 28px;
 }
 .user-navigation {
     margin: 0;
     padding: 0;
     width: 267px;
     text-align: right;
-    padding-top: 25px;
+    padding-top: 23px;
     flex-grow: 0;
     flex-shrink: 0;
     list-style: none;
@@ -641,9 +642,27 @@ body {
     background-color: rgba(241, 204, 180, 0.3);
 }
 .user-navigation li {
-    margin-left: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 32px;
 }
-.main-navigation p {  
+.trolley {
+    margin-right: 17px;
+    margin-left: 37px;
+}
+.trolley img {
+    margin-right: 7px;
+    margin-left: 5px;
+}
+.login-link {
+    margin-left: 34px;
+}
+.login-link img {
+    margin-right: 7px;
+}
+
+
+
+.main-navigation p { 
     margin: 0;
     padding: 0;
     width: 170px; /*Я вернула в разметку <br>, потому что играясь с шириной контейнера, настроить перенос строки в нужном месте не получается*/
@@ -655,8 +674,9 @@ body {
     min-height: 50px;
     background-color: rgba(241, 204, 180, 0.3);
 }
-
-
+.main-navigation p a {
+    display: block;
+}
     /*  Main  */
 
 .container {
@@ -682,8 +702,6 @@ body {
 .slider-1 {
     padding: 0;
     margin: 0;
-    width: 1146px;
-    padding: 0 27px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -692,7 +710,8 @@ body {
     min-height: 214px; 
 }
 .slider-1 p {
-    width: 680px;
+    width: 670px;
+    text-align: center;
     margin: 0 auto;
 
     /*Временно для сетки*/
@@ -724,9 +743,48 @@ body {
     width: 560px;
 }
 .raspberries {
+    padding: 0;
+    margin: 0;
     margin-right: 26px;
 }
-
+.raspberries h3 {
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+    margin-top: 16px;
+}
+.raspberries p {
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 16px;
+}
+.raspberries button {
+    margin-left: 375px;
+    margin-top: 43px;
+}
+.chocolate {
+    padding: 0;
+    margin: 0;
+}
+.chocolate h3 {
+    padding: 0;
+    margin: 0;
+    margin-left: 20px;
+    margin-top: 16px;
+}
+.chocolate p {
+    padding: 0;
+    margin: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 16px;
+}
+.chocolate button {
+    margin-left: 350px;
+    margin-top: 43px;
+}
 
     /*  Hit  */
 
@@ -736,7 +794,7 @@ body {
     margin: 0;
     width: 1146px;
     padding: 0 27px;
-    margin-bottom: 32px;
+    margin-bottom: 22px;
 
     /*Временно для сетки*/
     background-color: rgba(110, 237, 116, 0.3);
@@ -745,10 +803,8 @@ body {
 .hit-list {
     padding: 0;
     margin: 0;
-    width: 1146px;
-    padding: 0 27px;
     display: flex;
-    justify-content: space-between; /*  Вадим! В этом месте почему-то флекс-элименты прижались к правому краю контейнера, игнорируя паддинг! Не понятно... ;-(  */
+    justify-content: space-between;
 
     /*Временно для сетки*/
     min-height: 330px;
@@ -761,8 +817,12 @@ body {
     /*Временно для сетки*/
     min-height: 330px;
 }
+.hit-item-price {
+    margin-top: -65px;
+}
 .hit-item p {
     text-align: center;
+    margin-top: 24px;
 }
 
 
@@ -770,17 +830,61 @@ body {
 
 
 .shop-description {
-    padding: 0;
-    margin: 0;
-    width: 1146px;
-    padding: 0 27px;
+    padding: 23px 20px;
+    margin: 0 auto;
+    width: 1106px;
     margin-bottom: 39px;
 
     /*Временно для сетки*/
     background-color: rgba(110, 237, 116, 0.3);
-    min-height: 307px;
+    min-height: 261px;
+}
+.shop-description-topic {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 7px;
+}
+.shop-description-list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.first-column-list,
+.second-column-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.first-column-list li:first-child,
+.second-column-list li:first-child {
+    margin-bottom: 10px;
+
+    /*Временно для сетки*/
+    background-color: rgba(248, 247, 244, 0.2)
 }
 
+.shop-description-article {
+    margin: 0;
+    padding: 0;
+    width: 540px;
+    display: flex;
+
+    /*Временно для сетки*/
+    background-color: rgba(110, 237, 116, 0.3);
+}
+.shop-description-article-img {
+
+}
+.shop-description-article p {
+    margin: 0;
+    padding: 0;
+    margin-top: 15px;
+    margin-left: 7px;
+
+    /*Временно для сетки*/
+    background-color: rgba(254, 191, 80, 0.3);
+}
 
     /*  News  */
 
@@ -797,18 +901,58 @@ body {
     min-height: 220px;
 }
 .news {
+    padding: 0;
+    margin: 0;
     margin-right: 26px;
 
     /*Временно для сетки*/
     height: 220px;
+}
+.news h4 {
+    padding: 0;
+    margin: 0;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+.news a {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    margin-left: 20px;
+    width: 290px;
 }
 .subscription {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+.subscription-inner {
+    display: flex;
+    flex-wrap: wrap;
+}
 
+/*                           Здесь этот параграф, про который я спрашивала
+.subscription-inner p {
+    padding: 0;
+    margin: 0;
+    margin-top: 32px;
+    margin-left: 22px;
+    margin-bottom: 35px;
+    width: 510px;
 
+    /*Временно для сетки*/     /*
+    background-color: rgba(68, 53, 227, 0.3);
+    min-height: 65px;
+}
+
+*/
+
+.subscription-inner div {
+    padding: 0;
+    margin: 0;
+    margin-left: 22px;
+    width: 510px;
+}
     /*  Location  */
 
 
@@ -897,6 +1041,7 @@ body {
     background-height: auto;
     background-repeat: no-repeat;
 }
+
 .inner-page .main-navigation p{
     margin-top: -6px;
 }
@@ -926,7 +1071,6 @@ body {
     width: 1200px;
     padding: 0;
     margin: 0;
-    margin-bottom: px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 
 
