@@ -8,12 +8,12 @@ body {
     font-weight: 400;
     color: #ffffff;
     background-color: #849d8f;
-    background-image: url("../img/Slider-1.png");
+    background-image: url("../img/slider-1.png");
     background-position: top center;
     background-repeat: no-repeat;
 }
 .inner-page {
-    background-image: url("../img/Backlight-catalog.png");
+    background-image: url("../img/backlight-catalog.png");
 }
 a {
     text-decoration: none;
@@ -155,7 +155,7 @@ a.navigation:active {
 }
 .raspberries {
     background-color: #69182c;
-    background-image: url("../img/Raspberries-background.jpg");
+    background-image: url("../img/raspberries-background.jpg");
     background-repeat: no-repeat;
     border-radius: 15px;
     width: 560px;
@@ -163,7 +163,7 @@ a.navigation:active {
 }
 .chocolate {
     background-color: #3f2519;
-    background-image: url("../img/Chocolate-background.jpg");
+    background-image: url("../img/chocolate-background.jpg");
     background-repeat: no-repeat;
     border-radius: 15px;
     width: 560px;
@@ -199,7 +199,7 @@ a.navigation:active {
 }
 .shop-description{
     background-color: #ecdebe;
-    background-image: url("../img/Waffle-pattern.jpg");
+    background-image: url("../img/waffle-pattern.jpg");
     border-radius: 15px;
     width: 1150px;
     min-height: 310px;
@@ -220,7 +220,7 @@ a.navigation:active {
 }
 .news {
     background-color: #f1c5ca;
-    background-image: url("../img/Strawberry-background.jpg");
+    background-image: url("../img/strawberry-background.jpg");
     background-repeat: no-repeat;
     border-radius: 15px;
     width: 560px;
@@ -242,7 +242,7 @@ a.navigation:active {
     background-color: rgba(255, 255, 255, 0.8);
 }
 .subscription{
-    background-image: url("../img/Post-background.svg");
+    background-image: url("../img/post-background.svg");
     background-repeat: no-repeat;
     width: 550px;
     min-height: 210px;
@@ -270,7 +270,7 @@ a.navigation:active {
     height: 44px;
 }
 .map {
-    background-image: url("../img/Map.jpg");
+    background-image: url("../img/map.jpg");
     background-repeat: no-repeat;
     width: 1200px;
     height: 429px;
@@ -480,7 +480,7 @@ label.catalog-filter-form-popularity {
     border: none;
     border-radius: 25px;
     background-color: rgba(248, 247, 244, 0.2);
-    background-image: url("../img/Icon-down-dir.svg");
+    background-image: url("../img/icon-down-dir.svg");
     background-position: right center;
     background-repeat: no-repeat;
     font-size: 16px;
@@ -578,11 +578,11 @@ body {
 }
 body {
 
-    /*Временно для сетки*/ /*
+    /*Временно для сетки*/ 
     background-image: url("../img/gllacy-index-1200.jpg");
     background-width: 1200px;
     background-height: auto;
-    background-repeat: no-repeat; */
+    background-repeat: no-repeat; 
 }
 
 
@@ -596,9 +596,9 @@ body {
     padding: 0 27px;
     min-height: 120px;
 
-    /*Временно для сетки*/ /*
+    /*Временно для сетки*/ 
     background-color: rgba(237, 110, 146, 0.3);
-     */
+     
     
 }
 .main-navigation {
@@ -617,8 +617,8 @@ body {
     flex-grow: 0;
     flex-shrink: 0;
 
-    /*Временно для сетки*/  /*
-    background-color: rgba(241, 204, 180, 0.3);  */
+    /*Временно для сетки*/  
+    background-color: rgba(241, 204, 180, 0.3); 
 }
 .site-navigation {
     margin: 0;
@@ -628,14 +628,13 @@ body {
     text-align: left;
     padding-top: 30px;
     list-style: none;
-    flex-grow: 0;
-    flex-shrink: 0;
     display: flex;
+    flex-wrap: wrap;
     min-height: 40px;
 
-    /*Временно для сетки*/   /*
+    /*Временно для сетки*/   
     
-    background-color: rgba(241, 204, 180, 0.3);  */
+    background-color: rgba(210, 204, 180, 0.3);  
 }
 .site-navigation li {
     margin-right: 28px;
@@ -653,9 +652,9 @@ body {
     justify-content: flex-end;
     min-height: 45px;
 
-    /*Временно для сетки*/   /*
+    /*Временно для сетки*/   
     
-    background-color: rgba(241, 204, 180, 0.3);  */
+    background-color: rgba(241, 204, 180, 0.3);  
 }
 .user-navigation li {
     background-color: rgba(255, 255, 255, 0.2);
@@ -687,9 +686,9 @@ body {
     flex-shrink: 0;
     min-height: 50px;
 
-    /*Временно для сетки*/   /*
+    /*Временно для сетки*/  
     
-    background-color: rgba(241, 204, 180, 0.3);   */
+    background-color: rgba(241, 204, 180, 0.3);  
 }
 .main-navigation p a {
     display: block;
@@ -713,9 +712,9 @@ body {
     margin-bottom: 30px;
     min-height: 225px;
 
-    /*Временно для сетки*/   /*
+    /*Временно для сетки*/   
     background-color: rgba(241, 204, 180, 0.3);
-       */
+    
 }
 .slider-1 {
     padding: 0;
@@ -731,9 +730,9 @@ body {
     margin: 0 auto;
     min-height: 130px;
 
-    /*Временно для сетки*/    /*
+    /*Временно для сетки*/    
     
-    background-color: rgba(237, 110, 146, 0.3);   */
+    background-color: rgba(237, 110, 146, 0.3);  
 }
 .slider-1 button {
     width: 278;
@@ -753,9 +752,8 @@ body {
     display: flex;
     min-height: 230px;
 
-    /*Временно для сетки*/    /*
+    /*Временно для сетки*/    
     background-color: rgba(254, 191, 80, 0.3);
-        */
 }
 .promotion article {
     width: 560px;
@@ -815,9 +813,8 @@ body {
     margin-bottom: 22px;
     min-height: 330px;
 
-    /*Временно для сетки*/    /*
+    /*Временно для сетки*/
     background-color: rgba(110, 237, 116, 0.3);
-       */
 }
 .hit-list {
     padding: 0;
@@ -851,9 +848,8 @@ body {
     margin-bottom: 39px;
     min-height: 261px;
 
-    /*Временно для сетки*/     /*
+    /*Временно для сетки*/    
     background-color: rgba(110, 237, 116, 0.3);
-        */
 }
 .shop-description-topic {
     padding: 0;
@@ -873,8 +869,8 @@ body {
     width: 540px;
     display: flex;
 
-    /*Временно для сетки*/   /*
-    background-color: rgba(110, 237, 116, 0.3);   */
+    /*Временно для сетки*/   
+    background-color: rgba(110, 237, 116, 0.3); 
 }
 .shop-description li:nth-child(1) {
     order: 0;
@@ -897,8 +893,8 @@ body {
     margin-top: 15px;
     margin-left: 7px;
 
-    /*Временно для сетки*/   /*
-    background-color: rgba(254, 191, 80, 0.3);   */
+    /*Временно для сетки*/   
+    background-color: rgba(254, 191, 80, 0.3); 
 }
 
     /*  News  */
@@ -912,9 +908,8 @@ body {
     display: flex;
     min-height: 220px;
 
-    /*Временно для сетки*/    /*
+    /*Временно для сетки*/    
     background-color: rgba(68, 53, 227, 0.3);
-       */
 }
 .news {
     padding: 0;
@@ -954,9 +949,8 @@ body {
     width: 510px;
     min-height: 65px; 
 
-    /*Временно для сетки*/    /*   
+    /*Временно для сетки*/      
     background-color: rgba(68, 53, 227, 0.3);
-      */
 }
 .subscription-form {
     padding: 0;
@@ -981,9 +975,8 @@ body {
     justify-content: space-between;
     min-height: 103px; 
 
-    /*Временно для сетки*/    /*
+    /*Временно для сетки*/    
     background-color: rgba(68, 53, 227, 0.3);
-      */
 }
 .footer-social ul{
     padding: 0;
@@ -998,9 +991,8 @@ body {
     justify-content: flex-start;
     min-height: 37px;
 
-    /*Временно для сетки*/   /*
+    /*Временно для сетки*/   
     background-color: rgba(110, 237, 116, 0.3);
-       */
 }
 .footer-social ul li {
     margin-right: 11px;
@@ -1019,9 +1011,8 @@ body {
     align-items: flex-start;
     min-height: 40px;
 
-    /*Временно для сетки*/   /*
+    /*Временно для сетки*/   
     background-color: rgba(241, 204, 180, 0.3);
-       */
 }
 .info-link {
     list-style: none;
@@ -1030,9 +1021,8 @@ body {
     width: 180px;
     min-height: 17px;
 
-    /*Временно для сетки*/  /*
+    /*Временно для сетки*/  
     background-color: rgba(241, 204, 180, 0.3);
-       */
 }
 .info li:nth-child(1) {
     order: 0;
@@ -1068,9 +1058,8 @@ body {
     flex-direction: column;
     min-height: 65px;
 
-    /*Временно для сетки*/   /*
+    /*Временно для сетки*/   
     background-color: rgba(110, 237, 116, 0.3);
-        */
 }
 .ha-logo {
     margin: 0;
@@ -1083,8 +1072,8 @@ body {
     padding: 0;
     margin-left: 78px;
 
-    /*Временно для сетки*/   /*
-    background-color: rgba(254, 191, 80, 0.3);   */
+    /*Временно для сетки*/   
+    background-color: rgba(254, 191, 80, 0.3); 
 }
 
 
@@ -1094,17 +1083,27 @@ body {
 
 
 .inner-page {
-    /*Временно для сетки*/    /*
+    /*Временно для сетки*/   
     background-image: url("../img/gllacy-catalog-1200.jpg");
     background-width: 1200px;
     background-height: auto;
-    background-repeat: no-repeat;     */
+    background-repeat: no-repeat; 
 }
-
+.full-trolley::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 21px;
+    height: 20px;
+    background-image: url("../img/trolley-full.svg");           /*         это здесь! */
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+}
 .inner-page .main-navigation p{
     margin-top: -6px;
 }
-
     /*  Breadcrumbs  */
 
 
@@ -1117,8 +1116,8 @@ body {
     justify-content: flex-start;
     min-height: 20px;
 
-    /*Временно для сетки*/   /*
-    background-color: rgba(68, 53, 227, 0.3);    */
+    /*Временно для сетки*/  
+    background-color: rgba(68, 53, 227, 0.3); 
     
 }
 .inner-page .main-header {
@@ -1135,8 +1134,8 @@ body {
     min-height: 1443px;
 
 
-    /*Временно для сетки*/   /*
-    background-color: rgba(75, 14, 103, 0.3);   */
+    /*Временно для сетки*/  
+    background-color: rgba(75, 14, 103, 0.3); 
     
 }
 
@@ -1148,8 +1147,8 @@ body {
     margin-bottom: 25px;
     min-height: 40px;
 
-    /*Временно для сетки*/   /*
-    background-color: rgba(254, 191, 80, 0.3);   */
+    /*Временно для сетки*/  
+    background-color: rgba(254, 191, 80, 0.3); 
     
 }
 
@@ -1165,8 +1164,8 @@ body {
     margin-bottom: 39px;
     min-height: 134px;
 
-    /*Временно для сетки*/   /*
-    background-color: rgba(110, 237, 116, 0.3);   */
+    /*Временно для сетки*/ 
+    background-color: rgba(110, 237, 116, 0.3); 
     
 }
 .catalog-list {
@@ -1180,8 +1179,8 @@ body {
     justify-content: space-between;
     min-height: 1055px;
 
-    /*Временно для сетки*/   /*
-    background-color: rgba(241, 204, 180, 0.3);   */
+    /*Временно для сетки*/ 
+    background-color: rgba(241, 204, 180, 0.3); 
     
 }
 .catalog-item {
@@ -1216,9 +1215,8 @@ body {
     justify-content: flex-end;
     min-height: 30px;
 
-    /*Временно для сетки*/  /*
-    background-color: rgba(237, 110, 146, 0.3);   */
-    
+    /*Временно для сетки*/ 
+    background-color: rgba(237, 110, 146, 0.3);  
 }
 .pagination-item {
     margin-left: 21px;
