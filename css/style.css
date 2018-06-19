@@ -42,13 +42,17 @@ a:active {
 .main-navigation a {
     color: #ffffff;
 }
-a.navigation:hover,
-a.navigation:focus {
-    border-radius: 25px;
+
+
+
+
+
+a.navigation-site:hover,
+a.navigation-site:focus {
     color: #333333;
     background-color: rgb(247, 246, 243);
 }
-a.navigation:active {
+a.navigation-site:active {
     border-radius: 25px;
     color: #333333;
     background-color: rgb(237, 237, 237);
@@ -624,9 +628,9 @@ body {
     margin: 0;
     padding: 0;
     width: 382px;
-    margin-right: 319px;
+    margin-right: 293px;
     text-align: left;
-    padding-top: 30px;
+    padding-top: 25px;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
@@ -639,16 +643,31 @@ body {
 .site-navigation li {
     margin-right: 28px;
 }
+
+
+a.navigation-site {
+    box-sizing: border-box;
+    padding: 8px 15px 8px 15px;
+    border-radius: 25px;
+    color: #333333;
+    background-color: rgb(247, 246, 243);
+}
+
+
+
+
+
+
+
 .user-navigation {
     margin: 0;
     padding: 0;
-    width: 267px;
+    width: 293px;
     text-align: right;
-    padding-top: 23px;
-    flex-grow: 0;
-    flex-shrink: 0;
+    padding-top: 24px;
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
     min-height: 45px;
 
@@ -659,20 +678,26 @@ body {
 .user-navigation li {
     background-color: rgba(255, 255, 255, 0.2);
     height: 32px;
+    padding-right: 17px;
+    padding-left: 16px;
+    border-radius: 25px;
+    text-align: center;
+    margin-left: 10px;
 }
-.trolley {
-    margin-right: 17px;
-    margin-left: 37px;
+.navigation {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
 }
-.trolley img {
-    margin-right: 7px;
-    margin-left: 5px;
+.empty-trolley svg,
+.full-trolley svg,
+.login-link svg  {
+    margin-right: 6px;
 }
-.login-link {
-    margin-left: 34px;
-}
-.login-link img {
-    margin-right: 7px;
+.user-navigation .search {
+    margin: 0;
+    padding-right: 8px;
+    padding-left: 8px;
 }
 
 
@@ -1089,17 +1114,8 @@ body {
     background-height: auto;
     background-repeat: no-repeat; 
 }
-.full-trolley::before {
-    content: "";
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    width: 21px;
-    height: 20px;
-    background-image: url("../img/trolley-full.svg");           /*         это здесь! */
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: contain;
+.full-trolley {
+    position: relative;
 }
 .inner-page .main-navigation p{
     margin-top: -6px;
