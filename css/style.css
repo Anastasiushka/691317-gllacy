@@ -42,11 +42,15 @@ a:active {
 .main-navigation a {
     color: #ffffff;
 }
-
-
-
-
-
+a.navigation-site {
+    box-sizing: border-box;
+    padding: 8px 15px 8px 15px;
+    border-radius: 25px;
+    color: #ffffff
+    text-shadow: none;
+    box-shadow: none;
+    background-color: transparent;
+}
 a.navigation-site:hover,
 a.navigation-site:focus {
     color: #333333;
@@ -61,6 +65,7 @@ a.navigation-site:active {
 .site-navigation-current a {
     border-radius: 25px;
     background-color: #d07058;
+    padding: 8px 15px 8px 15px;
 }
 .main-navigation p {
     font-size: 14px;
@@ -617,7 +622,7 @@ body {
     width: 154;
     height: 64;
     padding-top: 8px;
-    padding-right: 24px;
+    padding-right: 9px;
     flex-grow: 0;
     flex-shrink: 0;
 
@@ -627,10 +632,10 @@ body {
 .site-navigation {
     margin: 0;
     padding: 0;
-    width: 382px;
-    margin-right: 293px;
+    width: 482px;
+    margin-right: 208px;
     text-align: left;
-    padding-top: 25px;
+    padding-top: 17px;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
@@ -641,17 +646,10 @@ body {
     background-color: rgba(210, 204, 180, 0.3);  
 }
 .site-navigation li {
-    margin-right: 28px;
+    margin-right: -2px;
 }
 
 
-a.navigation-site {
-    box-sizing: border-box;
-    padding: 8px 15px 8px 15px;
-    border-radius: 25px;
-    color: #333333;
-    background-color: rgb(247, 246, 243);
-}
 
 
 
