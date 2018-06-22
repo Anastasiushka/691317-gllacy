@@ -1718,7 +1718,7 @@ fieldset {
 }
 .form-fat label::before {
     content: "";
-    opacity: 0;
+    visibility: hidden;
     position: absolute;
     width: 25px;
     height: 25px;
@@ -1727,10 +1727,11 @@ fieldset {
     background-image: url("../img/radio-on.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
+    opacity: 0.8;
 }
 .form-fat label::after {
     content: "";
-    opacity: 0;
+    visibility: hidden;
     position: absolute;
     width: 25px;
     height: 25px;
@@ -1739,11 +1740,12 @@ fieldset {
     background-image: url("../img/radio-off.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
+    opacity: 0.8;
 }
 .form-fat input:not(:checked) + label::after,
 .form-fat input:checked + label::before
 {
-  opacity: 1;
+  visibility: visible;
 }
 .form-fillers {
     width: 702px;
@@ -1794,7 +1796,7 @@ fieldset {
 }
 .f-fillers label::before {
     content: "";
-    opacity: 0;
+    visibility: hidden;
     position: absolute;
     width: 27px;
     height: 25px;
@@ -1803,10 +1805,11 @@ fieldset {
     background-image: url("../img/checkbox-on.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
+    opacity: 0.8;
 }
 .f-fillers label::after {
     content: "";
-    opacity: 0;
+    visibility: hidden;
     position: absolute;
     width: 27px;
     height: 25px;
@@ -1815,11 +1818,12 @@ fieldset {
     background-image: url("../img/checkbox-off.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
+    opacity: 0.8;
 }
 .f-fillers input:not(:checked) + label::after,
 .f-fillers input:checked + label::before
 {
-  opacity: 1;
+  visibility: visible;
 }
 .button-form {
     margin-top: 38px;
