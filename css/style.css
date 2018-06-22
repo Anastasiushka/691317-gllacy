@@ -1646,10 +1646,10 @@ li.full-trolley:focus polygon {
 .footer-copyright p {
     margin: 0;
     padding: 0;
-    margin-left: 78px;
+    margin-left: 77px;
 
-    /*Временно для сетки*/   /*      
-    background-color: rgba(254, 191, 80, 0.3);   */
+    /*Временно для сетки*/  /*      
+    background-color: rgba(254, 191, 80, 0.3);    */
 }
 
 
