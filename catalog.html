@@ -14,13 +14,25 @@
                     <img src="img/logo.svg" width="154" height="64" alt="Логотип Gllacy Shop">
                 </a>
                 <ul class="site-navigation">
-                    <li class="site-navigation-current navigation-site"><a class="navigation" href="catalog.html">Каталог</a></li>
+                    <li class="site-navigation-current navigation-site catalog-menu">
+                        <a class="navigation" href="catalog.html">Каталог</a>
+                        <section class="modal modal-main-menu">
+                            <h2 class="visually-hidden">Главное меню</h2>
+                            <div><a href="#"><b>Новинки</b></a></div>
+                            <ul class="modal-main-menu-list">
+                                <li class="modal-main-menu-item menu-item-current"><a href="catalog.html">Сливочное</a></li>
+                                <li class="modal-main-menu-item"><a href="#">Щербеты</a></li>
+                                <li class="modal-main-menu-item"><a href="#">Фруктовый лед</a></li>
+                                <li class="modal-main-menu-item"><a href="#">Мелорин</a></li>
+                            </ul>
+                        </section>
+                    </li>
                     <li><a class="navigation navigation-site" href="#"><span class="menu-underline">Доставка и оплата</span></a></li>
                     <li><a class="navigation navigation-site" href="#"><span class="menu-underline">О Компании</span></a></li>
                 </ul>
                 <ul class="user-navigation">
                     <li class="search">
-                        <a class="navigation href="#">
+                        <a class="navigation">
                             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17px"
                                     height="17px" viewBox="0 0 17 17" enable-background="new 0 0 17 17" xml:space="preserve">
                                 <g id="Layer_2">
@@ -30,9 +42,19 @@
                                 </g>
                             </svg>
                         </a>
+                        <div class="searching-container">
+                            <div class="modal modal-searching-form">
+                                <h2 class="visually-hidden">Форма поиска</h2>
+                                <div class="searching-form">
+                                    <form action="#" method="post">
+                                        <input type="search" placeholder="Что ищем?">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li class="login-link">
-                        <a class="navigation href="#">
+                        <a class="navigation">
                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                 width="21px" height="19px" viewBox="0 0 21 19" enable-background="new 0 0 21 19" xml:space="preserve">
                                 <g>
@@ -42,9 +64,27 @@
                             </svg>
                             Вход
                         </a>
+                        <div class="login-container">
+                            <section class="modal modal-login">
+                                <h2 class="visually-hidden">Вход на сайт</h2>
+                                <div class="login-form">
+                                    <form action="#" method="post">
+                                        <label for="email-entrance" class="visually-hidden">Электронная почта</label>
+                                        <input id="email-entrance" type="email" placeholder="Электронная почта">
+                                        <label for="password-entrance" class="visually-hidden">Пароль</label>
+                                        <input id="password-entrance" type="password" placeholder="Пароль">
+                                        <button class="button button-entrance" type="submit">Войти</button>
+                                    </form>
+                                </div>
+                                <div class="login-links">
+                                    <a class="forgotten-password" href="#">Забыли пароль?</a>
+                                    <a class="new-registration" href="#">Новая регистрация</a>
+                                </div>
+                            </section>
+                        </div>
                     </li>
                     <li class="trolley full-trolley">
-                        <a class="navigation" href="#">
+                        <a class="navigation">
                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                  width="21px" height="20px" viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
                                 <polygon fill="#E84D37" points="5.888,4.031 6.922,13 17.372,13 18.548,4.031 "/>
@@ -54,6 +94,50 @@
                             </svg>
                             2 товара
                         </a>
+                        <div class="cart-container">
+                            <section class=" modal modal-cart">
+                                <h2 class="visually-hidden">Корзина</h2>
+                                <table class="modal-shopping-cart">
+                                    <tr class="orange-plombir">
+                                        <td>
+                                            <!-- Здесь будет фото мороженого  -->
+                                        </td>
+                                        <td>
+                                            Пломбир с апельсиновым джемом
+                                        </td>
+                                        <td>
+                                            <span>1,5 кг *</span>
+                                            <span class="price-number-cart">200</span><span class="price-currency-cart"> руб.</span>
+                                        </td>
+                                        <td>
+                                            300 руб.
+                                        </td>
+                                    </tr>
+                                    <tr class="strawberry-plombir">
+                                        <td>
+                                            <!-- Здесь будет фото мороженого -->
+                                        </td>
+                                        <td>
+                                            Клубничный пломбир с присыпкой
+                                            из белого шоколада
+                                        </td>
+                                        <td>
+                                            <span>1,5 кг *</span>
+                                            <span class="price-number-cart">300</span><span class="price-currency-cart"> руб.</span>
+                                        </td>
+                                        <td>
+                                            450 руб.
+                                        </td>
+                                    </tr>
+                                    <tr class="total">
+                                        <td colspan="4">
+                                            <b>Итого:<span class="price-number"> 750</span><span class="price-currency-modal"> руб.</span></b>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <button class="button button-cart" type="submit">Оформить заказ</button>
+                            </section>
+                        </div>
                     </li>
                 </ul>
                 <p>
@@ -65,7 +149,9 @@
         <main class="container">
             <ul class="breadcrumbs">
                 <li><a href="index.html">Главная</a></li>
+                <li>&raquo;</li>
                 <li><a href="#">Каталог</a></li>
+                <li>&raquo;</li>
                 <li class="breadcrumbs-current">Сливочное</li>
             </ul>
             <h1 class="page-title">Сливочное мороженое</h1>
@@ -145,6 +231,8 @@
                                 джемом и цитрусовой стружкой
                             </a>
                         </p>
+                        <div class="catalog-item-glance"></div>
+                        <a class="button button-glance" href="#">Быстрый просмотр</a>
                     </li>
                     <li class="catalog-item">
                         <a class="catalog-item-image" href="#">
@@ -160,6 +248,8 @@
                                 шоколада
                             </a>
                         </p>
+                        <div class="catalog-item-glance"></div>
+                        <a class="button button-glance" href="#">Быстрый просмотр</a>
                     </li>
                     <li class="catalog-item">
                         <a class="catalog-item-image" href="#">
@@ -175,6 +265,8 @@
                                 присыпкой из белого шоколада
                             </a>
                         </p>
+                        <div class="catalog-item-glance"></div>
+                        <a class="button button-glance" href="#">Быстрый просмотр</a>
                     </li>
                     <li class="catalog-item">
                         <a class="catalog-item-image" href="#">
@@ -190,6 +282,8 @@
                                 карамельной подливкой
                             </a>
                         </p>
+                        <div class="catalog-item-glance"></div>
+                        <a class="button button-glance" href="#">Быстрый просмотр</a>
                     </li>
                     <li class="catalog-item">
                         <a class="catalog-item-image" href="#">
@@ -205,6 +299,8 @@
                                 джемом
                             </a>
                         </p>
+                        <div class="catalog-item-glance"></div>
+                        <a class="button button-glance" href="#">Быстрый просмотр</a>
                     </li>
                     <li class="catalog-item">
                         <a class="catalog-item-image" href="#">
@@ -220,6 +316,8 @@
                                 ягодами черники
                             </a>
                         </p>
+                        <div class="catalog-item-glance"></div>
+                        <a class="button button-glance" href="#">Быстрый просмотр</a>
                     </li>
                     <li class="catalog-item">
                         <a class="catalog-item-image" href="#">
@@ -235,6 +333,8 @@
                                 карамельной присыпкой
                             </a>
                         </p>
+                        <div class="catalog-item-glance"></div>
+                        <a class="button button-glance" href="#">Быстрый просмотр</a>
                     </li>
                     <li class="catalog-item">
                         <a class="catalog-item-image" href="#">
@@ -250,6 +350,8 @@
                                 стружкой
                             </a>
                         </p>
+                        <div class="catalog-item-glance"></div>
+                        <a class="button button-glance" href="#">Быстрый просмотр</a>
                     </li>
                     <li class="catalog-item">
                         <a class="catalog-item-image" href="#">
@@ -265,6 +367,8 @@
                                 кусочками шоколада
                             </a>
                         </p>
+                        <div class="catalog-item-glance"></div>
+                        <a class="button button-glance" href="#">Быстрый просмотр</a>
                     </li>
                     <li class="catalog-item">
                         <a class="catalog-item-image" href="#">
@@ -280,6 +384,8 @@
                                 сиропом
                             </a>
                         </p>
+                        <div class="catalog-item-glance"></div>
+                        <a class="button button-glance" href="#">Быстрый просмотр</a>
                     </li>
                     <li class="catalog-item">
                         <a class="catalog-item-image" href="#">
@@ -295,6 +401,8 @@
                                 шоколада
                             </a>
                         </p>
+                        <div class="catalog-item-glance"></div>
+                        <a class="button button-glance" href="#">Быстрый просмотр</a>
                     </li>
                     <li class="catalog-item">
                         <a class="catalog-item-image" href="#">
@@ -309,17 +417,19 @@
                                 Сливочное с мятным сиропом
                             </a>
                         </p>
+                        <div class="catalog-item-glance"></div>
+                        <a class="button button-glance" href="#">Быстрый просмотр</a>
                     </li>
                 </ul>
 
                 <ul class="pagination-list">
-                   <li class="pagination-item pagination-item-disabled"><a href="#"><</a></li> 
+                   <li class="pagination-item pagination-item-disabled"><a href="#">&lang;</a></li> 
                    <li class="pagination-item pagination-item-current"><a>1</a></li>
                    <li class="pagination-item"><a href="#">2</a></li>
                    <li class="pagination-item"><a href="#">3</a></li>
                    <li class="pagination-item"><a href="#">4</a></li>
                    <li class="pagination-item"><a href="#">5</a></li>
-                   <li class="pagination-item"><a href="#">></a></li> 
+                   <li class="pagination-item"><a href="#">&rang;</a></li> 
                 </ul>
             </section>
         </main>
@@ -359,85 +469,5 @@
                 </p>
             </div>
         </footer>
-
-        <section class="modal modal-main-menu">
-            <h2 class="visually-hidden">Главное меню</h2>
-            <div><a href="#"><b>Новинки</b></a></div>
-            <ul class="modal-main-menu-list">
-                <li class="modal-main-menu-item menu-item-current"><a href="catalog.html">Сливочное</a></li>
-                <li class="modal-main-menu-item"><a href="#">Щербеты</a></li>
-                <li class="modal-main-menu-item"><a href="#">Фруктовый лед</a></li>
-                <li class="modal-main-menu-item"><a href="#">Мелорин</a></li>
-            </ul>
-        </section>
-
-        <section class=" modal modal-cart">
-            <h2 class="visually-hidden">Корзина</h2>
-            <table class="modal-shopping-cart">
-                <tr class="orange-plombir">
-                    <td>
-                        <!-- Здесь будет фото мороженого  -->
-                    </td>
-                    <td>
-                        Пломбир с апельсиновым джемом
-                    </td>
-                    <td>
-                        <span>1,5 кг *</span>
-                        <span class="price-number-cart">200</span><span class="price-currency-cart"> руб.</span>
-                    </td>
-                    <td>
-                        300 руб.
-                    </td>
-                </tr>
-                <tr class="strawberry-plombir">
-                    <td>
-                        <!-- Здесь будет фото мороженого -->
-                    </td>
-                    <td>
-                        Клубничный пломбир с присыпкой
-                        из белого шоколада
-                    </td>
-                    <td>
-                        <span>1,5 кг *</span>
-                        <span class="price-number-cart">300</span><span class="price-currency-cart"> руб.</span>
-                    </td>
-                    <td>
-                        450 руб.
-                    </td>
-                </tr>
-                <tr class="total">
-                    <td colspan="4">
-                        <b>Итого:<span class="price-number"> 750</span><span class="price-currency-modal"> руб.</span></b>
-                    </td>
-                </tr>
-            </table>
-            <button class="button button-cart" type="submit">Оформить заказ</button>
-        </section>
-
-        <section class="modal modal-login">
-            <h2 class="visually-hidden">Вход на сайт</h2>
-            <div class="login-form">
-                <form action="#" method="post">
-                    <label for="email-entrance" class="visually-hidden">Электронная почта</label>
-                    <input id="email-entrance" type="email" placeholder="Электронная почта">
-                    <label for="password-entrance" class="visually-hidden">Пароль</label>
-                    <input id="password-entrance" type="password" placeholder="Пароль">
-                    <button class="button button-entrance" type="submit">Войти</button>
-                </form>
-            </div>
-            <div class="login-links">
-                <a class="forgotten-password" href="#">Забыли пароль?</a>
-                <a class="new-registration" href="#">Новая регистрация</a>
-            </div>
-        </section>
-
-        <div class=" modal modal-searching-form">
-            <h2 class="visually-hidden">Форма поиска</h2>
-            <div class="searching-form">
-                <form action="#" method="post">
-                    <input type="search" placeholder="Что ищем?">
-                </form>
-            </div>
-        </div>
     </body>
 </html>

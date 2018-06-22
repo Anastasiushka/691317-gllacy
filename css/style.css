@@ -192,13 +192,21 @@ a.navigation-site:active {
     background-color: rgb(237, 237, 237);
     box-shadow: inset 0px 2px 1px 0px rgb(105, 105, 105);
 }
-.site-navigation-current a {
+.site-navigation-current .navigation {
     border-radius: 25px;
     background-color: #d07058;
     padding: 8px 15px 8px 15px;
 }
-
 .catalog-menu {
+    position: relative;
+}
+.search {
+    position: relative;
+}
+.login-link {
+    position: relative;
+}
+.full-trolley {
     position: relative;
 }
 
@@ -233,7 +241,7 @@ a.navigation-site:active {
 .button:hover,
 .button:focus {
     outline: none;
-    background-image: linear-gradient(360deg, rgba(231, 74, 53, 0.8) 0%, rgba(242, 104, 67, 0.8) 100%);
+    background-image: linear-gradient(360deg, rgb(220, 125, 107) 0%, rgb(225, 131, 112) 100%);
     box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
 }
 .button:active {
@@ -338,6 +346,8 @@ a.navigation-site:active {
     border-radius: 50%;
     width: 267px;
     height: 267px;
+    position: relative;
+    z-index: -2;
 }
 .hit-item-price {
     line-height: 45px;
@@ -387,7 +397,43 @@ a.navigation-site:active {
     background-repeat: no-repeat;
     background-position: 0 0;
 }
+.hit-item-glance {
+    position: absolute;
+    display: none;
+    z-index: -1;                   
+    top: -6px;
+    left: -13px;                                                        
+    width: 293px;
+    height: 405px;
+    border-radius: 5px;
+    background-color: rgba(248, 247, 244, 0.2);
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+} 
+.button-glance {
+    display: none;
+    justify-content: center;      
+    align-items: center;
+    width: 200px;
+    height: 44px;
+    position: absolute;
+    z-index: 1;
+    top: 334px;
+    left: 33px;
+}
+
+.hit-item:hover .hit-item-glance,
+.hit-item:focus .hit-item-glance {
+    display: block;                                                   
+}
+.hit-item:hover .button-glance,
+.hit-item:focus .button-glance {
+    display: flex;
+}
+
+
 .shop-description{
+    position: relative;
+    z-index: -2;
     background-color: #ecdebe;
     background-image: url("../img/waffle-pattern.jpg");
     border-radius: 15px;
@@ -643,9 +689,9 @@ a.navigation-site:active {
     outline:none;
     box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.5);
 }
-.login-links a:hover,
-.login-links a:focus,
-.login-links a:active {
+.modal-login .login-links a:hover,
+.modal-login .login-links a:focus,
+.modal-login .login-links a:active {
     color: rgb(232, 77, 55);
     border-bottom: 1px solid rgba(232, 77, 55, 0.3) 
 }
@@ -858,7 +904,7 @@ label.form-popularity {
 }
 .catalog-filter-form select:hover,
 .catalog-filter-form select:focus {
-    background-color: rgba(248, 247, 244, 0.2);
+    background-color: rgb(250, 250, 250);
     background-image: url("../img/icon-down-dir-2.svg");
     background-size: 11px 10px;
     background-position: 168px center;
@@ -866,7 +912,7 @@ label.form-popularity {
     color: #323232;
 }
 .catalog-filter-form select:focus option{
-    padding-left: 20px;                                              /* Не хочет задавать другой отступ для выпадающего окна селекта */
+    padding-left: 20px;                          
     color: #323232;
     font-size: 14px;
     line-height: 16px;
@@ -906,6 +952,8 @@ ul.catalog-list {
     border-radius: 50%;
     width: 267px;
     height: 267px;
+    position: relative;
+    z-index: -2;
 }
 .catalog-item-price {
     line-height: 45px;
@@ -928,20 +976,38 @@ ul.catalog-list {
 .catalog-item {
     position: relative;
 }
-
-
-/*
-.catalog-item:hover,
-.catalog-item:focus {
+.catalog-item-glance {
     position: absolute;
-    z-index: 1;                                                          Карточка товара, пока что не получается
+    display: none;
+    z-index: -1;                   
+    top: -6px;
+    left: -13px;                                                        
     width: 293px;
     height: 405px;
     border-radius: 5px;
     background-color: rgba(248, 247, 244, 0.2);
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+} 
+.button-glance {
+    display: none;
+    justify-content: center;      
+    align-items: center;
+    width: 200px;
+    height: 44px;
+    position: absolute;
+    z-index: 1;
+    top: 334px;
+    left: 33px;
 }
-*/
+
+.catalog-item:hover .catalog-item-glance,
+.catalog-item:focus .catalog-item-glance {
+    display: block;                                                   
+}
+.catalog-item:hover .button-glance,
+.catalog-item:focus .button-glance {
+    display: flex;
+}
 
 ul.pagination-list {
     list-style: none;
@@ -956,6 +1022,10 @@ ul.pagination-list {
     background-color: transparent;
     border-radius: 50%;  
 } 
+.pagination-item:first-child a,
+.pagination-item:last-child a { 
+    padding-bottom: 3px;
+}
 .pagination-item-current a {
     color: #323232;
     background-color: rgb(255, 255, 255); 
@@ -990,12 +1060,11 @@ body {
     padding: 0;
 }
 body {
-
-    /*Временно для сетки*/ /*
+    /*Временно для сетки*/  /*
     background-image: url("../img/gllacy-index-1200.jpg");
     background-width: 1200px;
     background-height: auto;
-    background-repeat: no-repeat; */
+    background-repeat: no-repeat;  */
 }
 
 
@@ -1073,7 +1142,29 @@ body {
     padding-left: 16px;
     border-radius: 25px;
     text-align: center;
-    margin-left: 10px;
+    margin-left: 10px;  
+}
+
+.user-navigation li:hover,
+.user-navigation li:focus {
+    background-color: rgb(248, 247, 244);
+    color: #323232;                              
+}                                           
+.user-navigation li:hover a,
+.user-navigation li:focus a {
+    color: #323232; 
+}
+.user-navigation li:hover path,
+.user-navigation li:focus path,
+.user-navigation li:hover polygon,
+.user-navigation li:focus polygon,
+.user-navigation li:hover circle,
+.user-navigation li:focus circle {
+    fill: #323232; 
+}
+li.full-trolley:hover polygon,
+li.full-trolley:focus polygon {
+    fill: #E84D37;
 }
 .navigation {
     display: flex;
@@ -1126,10 +1217,59 @@ body {
     padding: 0 27px;
     margin-bottom: 30px;
     min-height: 225px;
+    position: relative;
 
     /*Временно для сетки*/   /*
-    background-color: rgba(241, 204, 180, 0.3);  */
-    
+    background-color: rgba(241, 204, 180, 0.3);  */  
+}
+.slider-radio {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%
+}
+.first-slider{
+    bottom: 45px;
+    left: 27px;
+}
+.second-slider{
+    bottom: 45px;
+    left: 56px;
+}
+.third-slider{
+    bottom: 45px;
+    left: 85px;
+}
+.sliders-radio-buttons label::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 21px;
+    height: 21px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    border: none;
+    opacity: 0;
+}
+.sliders-radio-buttons label::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 17px;
+    height: 17px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    opacity: 0;
+}
+.sliders-radio-buttons input:checked + label::before,
+.sliders-radio-buttons input:not(:checked) + label::after {
+  opacity: 1;
+}
+.slider-radio:hover,
+.slider-radio:focus {
+    background-color: rgba(255, 255, 255, 0.4)
 }
 .slider-1 {
     padding: 0;
@@ -1508,14 +1648,14 @@ body {
     padding: 0;
     margin-left: 78px;
 
-    /*Временно для сетки*/   /*
+    /*Временно для сетки*/   /*      
     background-color: rgba(254, 191, 80, 0.3);   */
 }
 
 
 
 
-    /*  Сеточные стили страницы каталога */
+    /*  Сеточные стили страницы каталога */ 
 
 
 .inner-page {
@@ -1531,14 +1671,15 @@ body {
 .inner-page .main-navigation p{
     margin-top: -6px;
 }
+
     /*  Breadcrumbs  */
 
 
 .breadcrumbs {
     padding: 0;
     margin: 0;
-    width: 267px;
-    padding: 0 27px;
+    width: 265px;
+    padding: 0 28px;
     display: flex;
     justify-content: flex-start;
     min-height: 20px;
@@ -1551,7 +1692,7 @@ body {
     margin-bottom: -23px;
 }
 .breadcrumbs li {
-    margin-right: 20px;
+    margin-right: 7px;
 }
 .inner-page .container {
     width: 1200px;
@@ -1905,6 +2046,13 @@ fieldset {
 .modal-main-menu {
     position: absolute;
     z-index: 2;
+    top: 45px;
+    left: -5px;
+    display: none;
+}
+.catalog-menu:hover .modal-main-menu,
+.catalog-menu:focus .modal-main-menu {
+    display: block;
 }
 .modal-main-menu-list {
     padding: 0;
@@ -1941,11 +2089,31 @@ fieldset {
 }
 
 
-.modal-login {
-    padding: 20px 17px 21px 19px;  
+.login-container{
+    width: 277px;
+    min-height: 230px;
+    display: flex;          
+    justify-content: center;
+    align-items: flex-end;
+    background-color: transparent;
+    position: absolute;
+    z-index: 2;
+    top: 27px;
+    left: -184px;
+    display: none;
 }
+.modal-login {
+    padding: 20px 17px 21px 19px;
+}
+.login-link:hover .login-container, 
+.login-link:focus .login-container {
+    display: flex;
+}   
 .login-form input {
     margin-bottom: 20px;
+}
+.button-entrance {
+    margin-left: -140px;
 }
 .login-links {
     position: relative;
@@ -1964,8 +2132,25 @@ fieldset {
 }
 
 
+.searching-container {
+    width: 341px;
+    min-height: 100px;
+    display: flex;          
+    justify-content: center;
+    align-items: flex-end;
+    background-color: transparent;
+    position: absolute;
+    z-index: 2;
+    top: 21px;
+    left: -310px;
+    display: none;
+}
 .modal-searching-form {
     padding: 20px 17px;
+}
+.search:hover .searching-container,
+.search:focus .searching-container {
+    display: flex;
 }
 
 
@@ -1994,8 +2179,25 @@ fieldset {
 }
 
 
+.cart-container {
+    width: 540px;
+    min-height: 257px;
+    display: flex;          
+    justify-content: center;
+    align-items: flex-end;
+    background-color: transparent;
+    position: absolute;
+    z-index: 2;
+    top: 24px;
+    left: -423px;
+    display: none;
+}
 .modal-cart {
     padding: 30px 15px 20px 15px;
+}
+.full-trolley:hover .cart-container,
+.full-trolley:focus .cart-container {
+    display: flex;
 }
 .modal-shopping-cart {
     border-collapse: collapse;
