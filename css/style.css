@@ -1,7 +1,4 @@
-body {
-    margin: 0 auto;
-    padding: 0;
-    width: 1200px;
+body { 
     font-family: "Roboto", "Arial", sans-serif;
     font-size: 16px;
     line-height: 22px;
@@ -11,134 +8,23 @@ body {
     background-image: url("../img/slider-1.png");
     background-position: top center;
     background-repeat: no-repeat;  
-    } 
-
-/*
-.visually-hidden {
-  position: absolute;
-
-  width: 1px;
-  height: 1px;
-
-  clip: rect(0, 0, 0, 0);
-}
-
-.site-wrapper {
-    margin: 0 auto;
-  min-width: 1200px;
-  background-color: #849d8f;
-  background-image: url("../img/slider-1.png");
-  background-repeat: no-repeat;
-  background-position: top center;
-  
-  transition: background-image 0.5s ease, background-color 0.5s ease;
-}
-
-.site-wrapper::before,
-.site-wrapper::after {
-  content: "";
-
-  visibility: hidden;
-}
-
-.site-wrapper::before {
-  background-image: url("../img/slider-2.png");
-}
-
-.site-wrapper::after {
-  background-image: url("../img/slider-3.png");
-}
-
-.container {
-  width: 900px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.slider {
-  position: relative;
-  
-  padding-top: 321px;
-  
-  text-align: center;
-  color: #ffffff;
-}
-
-.slider-list {
-  margin: 0;
-  padding: 0;
-  
-  list-style: none;
-}
-
-.slide {
-  display: none;
-}
-
-.slide-title {
-  width: 700px;
-  margin: 0 auto;
-  margin-bottom: 27px;
-  
-  font-size: 60px;
-  line-height: 60px;
-  font-weight: 800;
-}
-
-.slider-controls {
-  position: absolute;
-  bottom: 63px;
-  left: 0;
-  z-index: 20;
-  
-  font-size: 0;
-}
-
-.slider-controls label {
-  display: inline-block;
-  width: 17px;
-  height: 17px;
-  margin-right: 8px;
-
-  vertical-align: top;
-
-  background-color: transparent;
-  border: 2px solid #ffffff;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-#product-1:checked ~ .site-wrapper {
-  background-color: #849d8f;
-  background-image: url("../img/slider-1.png");
-}
-
-#product-2:checked ~ .site-wrapper {
-  background-color: #8996a6;
-  background-image: url("../img/slider-2.png");
-}
-
-#product-3:checked ~ .site-wrapper {
-  background-color: #9d8b84;
-  background-image: url("../img/slider-3.png");
-}
-
-#product-1:checked ~ .site-wrapper #slide1,
-#product-2:checked ~ .site-wrapper #slide2,
-#product-3:checked ~ .site-wrapper #slide3 {
-  display: block;
-}
-
-#product-1:checked ~ .site-wrapper label[for="product-1"],
-#product-2:checked ~ .site-wrapper label[for="product-2"],
-#product-3:checked ~ .site-wrapper label[for="product-3"] {
-  background-color: #ffffff;
-}
-
-*/
-
+} 
 .inner-page {
     background-image: url("../img/backlight-catalog.png");
+    margin: 0 auto;
+    width: 1200px;
+}
+.main-header {
+    margin: 0 auto;
+    width: 1200px;
+}
+.container {
+    margin: 0 auto;
+    width: 1200px;  
+}
+.main-footer {
+    margin: 0 auto;
+    width: 1200px; 
 }
 a {
     text-decoration: none;
@@ -527,7 +413,7 @@ a.navigation-site:active {
     background-color: #dcdfcf;
     background-image: url("../img/map.jpg");
     background-repeat: no-repeat;
-    width: 1200px;
+    width: 100%;
     height: 429px;
 }
 .address {
@@ -1082,7 +968,6 @@ body {
 
 
 .main-header {
-    margin: 0;
     margin-bottom: 270px;
     width: 1146px;
     padding: 0 27px;
@@ -1210,7 +1095,6 @@ li.full-trolley:focus polygon {
 
 .container {
     padding: 0;
-    margin: 0;
 }
 
 
@@ -1523,16 +1407,24 @@ li.full-trolley:focus polygon {
 }
     /*  Location  */
 
-
 .location {
     position: relative;
+}
+.location-address {
+    position: absolute;
+    z-index: 2;
+    width: 1200px;
+    height: 429px;
+    top: 0;
+    left: 50%;
+    margin-left: -600px;
 }
 .address {
     padding: 30px 26px;
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     top: 62px;
-    left: 870px;
+    right: 27px;
 }
 .address p {
     padding: 0;
@@ -1549,7 +1441,6 @@ li.full-trolley:focus polygon {
 
 .main-footer {
     padding: 0;
-    margin: 0;
     width: 1146px;
     padding: 0 27px;
     display: flex;
@@ -2334,6 +2225,6 @@ fieldset {
     position: relative;
     z-index: 1;
     border: none;
-    width: 1200px;
+    width: 100%;
     height: 429px;
 }
