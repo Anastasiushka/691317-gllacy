@@ -1530,6 +1530,7 @@ li.full-trolley:focus polygon {
 .address {
     padding: 30px 26px;
     position: absolute;
+    z-index: 2;
     top: 62px;
     left: 870px;
 }
@@ -2169,8 +2170,18 @@ fieldset {
 }
 
 
-.modal-feedback-form {
+.feedback-container {
+    content: "";
     display: none;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;                                              
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-feedback-form {
     padding: 15px 15px 25px 25px;
     position: fixed;
     top: 50%;
@@ -2192,17 +2203,6 @@ fieldset {
 }
 .button-feedback {
     margin-left: 295px;
-}
-body::after {
-    content: "";
-    display: none;
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    left: 0;                                                                                    /* Как сделать оверлей? */
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 .modal-show {
     display: block;
@@ -2327,4 +2327,13 @@ body::after {
     background-repeat: no-repeat;
     background-position: 0 0;
     cursor: pointer;
+}
+
+
+.map iframe {
+    position: relative;
+    z-index: 1;
+    border: none;
+    width: 1200px;
+    height: 429px;
 }

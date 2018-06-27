@@ -320,7 +320,7 @@
             <section class="location">
                 <h2 class="visually-hidden">Как до нас добраться</h2>
                 <div class="map">
-                    <!-- Здесь будет карта -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2s!4v1530127528098" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
                 <div class="address">
                     <p>
@@ -388,22 +388,24 @@
             </div>
         </footer>
 
-        <section class="modal modal-feedback-form">
-            <h2>Мы обязательно вам ответим!</h2>
-            <h3 class="visually-hidden">Форма обратной связи</h3>
-            <div class="feedback-form">
-                <form action="#" method="post">
-                    <label for="name-feedback" class="visually-hidden">Имя</label>
-                    <input id="name-feedback" type="text" placeholder="Как вас зовут?">
-                    <label for="email-feedback" class="visually-hidden">Электронная почта</label>
-                    <input id="email-feedback" type="email" placeholder="Ваша почта для ответа?">
-                    <label for="message-feedback" class="visually-hidden">Ваше сообщение</label>
-                    <textarea id="message-feedback" name="message-feedback" placeholder="Напишите что-нибудь..."></textarea>
-                    <button class="button button-feedback" type="submit">Отправить</button>
-                </form>
-            </div>
-            <button class="modal-close" type="button">Закрыть</button>
-        </section>  
+        <div class="feedback-container">
+            <section class="modal modal-feedback-form">
+                <h2>Мы обязательно вам ответим!</h2>
+                <h3 class="visually-hidden">Форма обратной связи</h3>
+                <div class="feedback-form">
+                    <form action="#" method="post">
+                        <label for="name-feedback" class="visually-hidden">Имя</label>
+                        <input id="name-feedback" type="text" placeholder="Как вас зовут?">
+                        <label for="email-feedback" class="visually-hidden">Электронная почта</label>
+                        <input id="email-feedback" type="email" placeholder="Ваша почта для ответа?">
+                        <label for="message-feedback" class="visually-hidden">Ваше сообщение</label>
+                        <textarea id="message-feedback" name="message-feedback" placeholder="Напишите что-нибудь..."></textarea>
+                        <button class="button button-feedback" type="submit">Отправить</button>
+                    </form>
+                </div>
+                <button class="modal-close" type="button">Закрыть</button>
+            </section>  
+        </div>
 
         <script src="js/script.js" type="text/javascript"></script>     
     </body>
