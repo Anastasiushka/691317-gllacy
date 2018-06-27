@@ -176,7 +176,7 @@ a.navigation-site {
     box-sizing: border-box;
     padding: 8px 15px 8px 15px;
     border-radius: 25px;
-    color: #ffffff
+    color: #ffffff;
     text-shadow: none;
     box-shadow: none;
     background-color: transparent;
@@ -599,17 +599,17 @@ a.navigation-site:active {
     background-repeat: no-repeat;
     background-position: 0 0;
 }
-.footer-copyright p {
+.html-academy {
     font-size: 12px;
     line-height: 18px;
     font-weight: 400;
 }
-.footer-copyright p a {
+.html-academy a {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-.footer-copyright p a:hover,
-.footer-copyright p a:focus,
-.footer-copyright p a:active {
+.html-academy a:hover,
+.html-academy a:focus,
+.html-academy a:active {
     color: rgb(255, 188, 158);
     border-bottom: 1px solid rgba(255, 188, 158, 0.3);
 }
@@ -792,13 +792,24 @@ a.navigation-site:active {
     padding-left: 15px;
     padding-right: 15px;
 }
-.modal-feedback-form::before {
+.modal-close {
+    position: absolute;
+    top: 15px;
+    left: 443px;
+    width: 18px;
+    height: 17px;
+    font-size: 0;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+.modal-close::before {
     content: "";
     position: absolute;
     width: 18px;
     height: 17px;
-    top: 15px;
-    left: 443px;
+    top: 0px;
+    left: 0px;
     background-image: url("../img/cross-big.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -819,6 +830,10 @@ a.navigation-site:active {
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
     width: 511px;
     min-height: 202px;
+}
+.modal-cart img {
+    width: 33px;
+    height: 33px;
 }
 .modal-cart td {
     color: #323232;
@@ -1132,7 +1147,7 @@ body {
     /*Временно для сетки*/   /*   
     background-color: rgba(241, 204, 180, 0.3);  */
 }
-.user-navigation li {
+.user-navigation-item {
     background-color: rgba(255, 255, 255, 0.2);
     height: 32px;
     padding-right: 17px;
@@ -1142,21 +1157,21 @@ body {
     margin-left: 10px;  
 }
 
-.user-navigation li:hover,
-.user-navigation li:focus {
+.user-navigation-item:hover,
+.user-navigation-item:focus {
     background-color: rgb(248, 247, 244);
     color: #323232;                              
 }                                           
-.user-navigation li:hover a,
-.user-navigation li:focus a {
+.user-navigation-item:hover a,
+.user-navigation-item:focus a {
     color: #323232; 
 }
-.user-navigation li:hover path,
-.user-navigation li:focus path,
-.user-navigation li:hover polygon,
-.user-navigation li:focus polygon,
-.user-navigation li:hover circle,
-.user-navigation li:focus circle {
+.user-navigation-item:hover path,
+.user-navigation-item:focus path,
+.user-navigation-item:hover polygon,
+.user-navigation-item:focus polygon,
+.user-navigation-item:hover circle,
+.user-navigation-item:focus circle {
     fill: #323232; 
 }
 li.full-trolley:hover polygon,
@@ -1436,9 +1451,6 @@ li.full-trolley:focus polygon {
 }
 .shop-description li:nth-child(4) {
     order: 3;
-}
-.shop-description-article-img {
-
 }
 .shop-description-article p {
     margin: 0;
@@ -2078,10 +2090,13 @@ fieldset {
     position: relative;
 }
 .modal-main-menu div::after {
-    content: "__________________";
+    content: "";
+    width: 129px;
+    height: 1px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     position: absolute;
-    top: 21px;
-    margin-left: 6px;
+    top: 36px;
+    left: 6px;
     color: rgba(0, 0, 0, 0.2);
 }
 
@@ -2154,13 +2169,14 @@ fieldset {
 
 
 .modal-feedback-form {
+    display: none;
     padding: 15px 15px 25px 25px;
     position: fixed;
     top: 50%;
     margin-top: -223px;
     left: 50%;
     margin-left: -240px;
-    z-index: 5;
+    z-index: 11;
 }
 .modal-feedback-form h2 {
     margin: 0;
@@ -2176,13 +2192,43 @@ fieldset {
 .button-feedback {
     margin-left: 295px;
 }
-.overlay {
-    display: block;
+body::after {
+    content: "";
+    display: none;
     position: fixed;
-    z-index: 4;
+    z-index: 10;
+    top: 0;
+    left: 0;                                                                                    /* Как сделать оверлей? */
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-show {
+    display: block;
+}
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+  }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px);
+    }
+}
+.modal-error {
+  animation: shake 0.7s;
 }
 
 
