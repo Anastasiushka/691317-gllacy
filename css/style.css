@@ -215,7 +215,7 @@ a.navigation-site:active {
     line-height: 16px;
     font-weight: 700;
 }
-.main-navigation p b {
+.navigation-number {
     font-size: 22px;
     line-height: 34px;
 }
@@ -615,28 +615,29 @@ a.navigation-site:active {
 }
 
 
-.modal {
+.modal,
+.dropdown {
     background-color: rgb(248, 247, 244);
 }
 
 
-.modal-main-menu {
+.dropdown-main-menu {
     border-radius: 5px;
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
     width: 143px;
     min-height: 171px;
 }
-.modal-main-menu b {
+.dropdown-main-menu b {
     color: #323232;
     font-size: 14px;
     line-height: 16px;
     font-weight: 700;
 }
-.modal-main-menu a:focus,
-.modal-main-menu a:hover {
+.dropdown-main-menu a:focus,
+.dropdown-main-menu a:hover {
     background-color: rgb(251, 222, 215);
 }
-.modal-main-menu a:active {
+.dropdown-main-menu a:active {
     background-color: rgb(246, 181, 165);
 }
 .menu-item-current {
@@ -644,24 +645,24 @@ a.navigation-site:active {
     width: 143px;
     height: 28px;
 }
-.modal-main-menu-list a {
+.dropdown-main-menu-list a {
     color: #323232;
     font-size: 14px;
     line-height: 16px;
     font-weight: 400;
 }
-.modal-main-menu ul {
+.dropdown-main-menu ul {
     list-style: none;
 }
 
 
-.modal-login {
+.dropdown-login {
     border-radius: 6px;
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
     width: 241px;
     min-height: 173px;
 }
-.modal-login input {
+.dropdown-login input {
     font: inherit;
     width: 210px;
     height: 43px;
@@ -675,25 +676,19 @@ a.navigation-site:active {
     padding-left: 15px;
     padding-right: 15px;
 }
-.modal-login a {
+.dropdown-login a {
     color: #323232;
     font-size: 13px;
     line-height: 24px;
     font-weight: 400;
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
-.modal-login input:hover {
+.dropdown-login input:hover {
     box-shadow: 0 0 0 2px rgba(154, 154, 154, 0.5);
 }
-.modal-login input:focus {
+.dropdown-login input:focus {
     outline:none;
     box-shadow: 0 0 0 2px rgba(46, 136, 228, 0.5);
-}
-.modal-login .login-links a:hover,
-.modal-login .login-links a:focus,
-.modal-login .login-links a:active {
-    color: rgb(232, 77, 55);
-    border-bottom: 1px solid rgba(232, 77, 55, 0.3) 
 }
 
 
@@ -723,7 +718,7 @@ a.navigation-site:active {
 }
 
 
-.modal-searching-form {
+.dropdown-searching-form {
     border-radius: 6px;
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
     width: 312px;
@@ -825,17 +820,17 @@ a.navigation-site:active {
 }
 
 
-.modal-cart {
+.dropdown-cart {
     border-radius: 5px;
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
     width: 511px;
     min-height: 202px;
 }
-.modal-cart img {
+.dropdown-cart img {
     width: 33px;
     height: 33px;
 }
-.modal-cart td {
+.dropdown-cart td {
     color: #323232;
     font-size: 13px;
     line-height: 16px;
@@ -976,15 +971,15 @@ ul.catalog-list {
     font-size: 45px;
     text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
-.catalog-item p a {
+.catalog-item-description a {
     font-size: 16px;
     line-height: 22px;
     font-weight: 500;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-.catalog-item p a:hover,
-.catalog-item p a:focus,
-.catalog-item p a:active {
+.catalog-item-description a:hover,
+.catalog-item-description a:focus,
+.catalog-item-description a:active {
     color: rgb(255, 188, 158);
     border-bottom: 1px solid rgba(255, 188, 158, 0.3);
 }
@@ -1208,7 +1203,7 @@ li.full-trolley:focus polygon {
     /*Временно для сетки*/  /*   
     background-color: rgba(241, 204, 180, 0.3);  */
 }
-.main-navigation p a {
+.navigation-timing a {
     display: block;
 }
     /*  Main  */
@@ -1563,7 +1558,7 @@ li.full-trolley:focus polygon {
     /*Временно для сетки*/    /*
     background-color: rgba(68, 53, 227, 0.3);   */
 }
-.footer-social ul{
+.social-list{
     padding: 0;
     margin: 0;
     list-style: none;
@@ -1579,7 +1574,7 @@ li.full-trolley:focus polygon {
     /*Временно для сетки*/   /*
     background-color: rgba(110, 237, 116, 0.3);    */
 }
-.footer-social ul li {
+.social-list li {
     margin-right: 11px;
 }
 .info {
@@ -1677,7 +1672,7 @@ li.full-trolley:focus polygon {
 .full-trolley {
     position: relative;
 }
-.inner-page .main-navigation p{
+.inner-page .navigation-timing{
     margin-top: -6px;
 }
 
@@ -2050,20 +2045,20 @@ fieldset {
 }
 
 
-    /*  Модальные окна  */
+    /*  Выпадашки и модальное окно  */
 
-.modal-main-menu {
+.dropdown-main-menu {
     position: absolute;
     z-index: 2;
     top: 45px;
     left: -5px;
     display: none;
 }
-.catalog-menu:hover .modal-main-menu,
-.catalog-menu:focus .modal-main-menu {
+.catalog-menu:hover .dropdown-main-menu,
+.catalog-menu:focus .dropdown-main-menu {
     display: block;
 }
-.modal-main-menu-list {
+.dropdown-main-menu-list {
     padding: 0;
     margin: 0;
     width: 122px;
@@ -2072,24 +2067,24 @@ fieldset {
     flex-direction: column;
     justify-content: space-around;
 }
-.modal-main-menu a {
+.dropdown-main-menu a {
     display: block;
     min-height: 28px;
     width: 122px;
     padding-left: 21px;
 }
-.modal-main-menu a {
+.dropdown-main-menu a {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.modal-main-menu div {
+.dropdown-main-menu div {
     min-height: 38px;
     box-sizing: border-box;
     padding-top: 6px;
     position: relative;
 }
-.modal-main-menu div::after {
+.dropdown-main-menu div::after {
     content: "";
     width: 129px;
     height: 1px;
@@ -2101,13 +2096,19 @@ fieldset {
 }
 
 
-.modal-login {
+.dropdown-login {
     padding: 20px 17px 21px 19px;
     position: absolute;
     z-index: 2;
     top: 37px;
     right: 0px;
     display: none;
+}
+.login-links a:hover,
+.login-links a:focus,
+.login-links a:active {
+    color: rgb(232, 77, 55);
+    border-bottom: 1px solid rgba(232, 77, 55, 0.3) 
 }
 .login-link::after {
     content: "";
@@ -2118,8 +2119,8 @@ fieldset {
     top: 0px;
     background-color: transparent;
 }
-.login-link:hover .modal-login, 
-.login-link:focus .modal-login {
+.login-link:hover .dropdown-login, 
+.login-link:focus .dropdown-login {
     display: block;
 }   
 .login-form input {
@@ -2145,7 +2146,7 @@ fieldset {
 }
 
 
-.modal-searching-form {
+.dropdown-searching-form {
     padding: 20px 17px;
     position: absolute;
     z-index: 2;
@@ -2162,8 +2163,8 @@ fieldset {
     top: 0px;
     background-color: transparent;
 }
-.search:hover .modal-searching-form,
-.search:focus .modal-searching-form {
+.search:hover .dropdown-searching-form,
+.search:focus .dropdown-searching-form {
     display: block;
 }
 
@@ -2232,7 +2233,7 @@ body::after {
 }
 
 
-.modal-cart {
+.dropdown-cart {
     padding: 20px 15px 20px 15px;
     position: absolute;
     z-index: 2;
@@ -2249,11 +2250,11 @@ body::after {
     top: 0px;
     background-color: transparent;
 }
-.full-trolley:hover .modal-cart,
-.full-trolley:focus .modal-cart {
+.full-trolley:hover .dropdown-cart,
+.full-trolley:focus .dropdown-cart {
     display: block;
 }
-.modal-shopping-cart {
+.dropdown-shopping-cart {
     border-collapse: collapse;
 }
 .orange-plombir {
@@ -2267,7 +2268,7 @@ body::after {
     width: 73px;
     position: relative;
 }
-.modal-shopping-cart img {
+.dropdown-shopping-cart img {
     position: absolute;
     top: 0px;
     left: 25px;
@@ -2299,31 +2300,31 @@ body::after {
     text-align: right;
     vertical-align: bottom;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-.orange-plombir td:first-child::before {
-    content: "";
-    position: absolute;
-    width: 11px;
-    height: 11px;
-    top: 12px;
-    left: 0px;
-    background-image: url("../img/cross-small.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-}
-.strawberry-plombir td:first-child::before {
-    content: "";
-    position: absolute;
-    width: 11px;
-    height: 11px;
-    top: 12px;
-    left: 0px;
-    background-image: url("../img/cross-small.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-}
+}      
 .button-cart {
     margin-top: 13px;
     margin-left: 340px;
 }
-
+.cart-item-close {
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    top: 12px;
+    left: 0px;
+    font-size: 0;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+.cart-item-close::before {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    top: 0px;
+    left: 0px;
+    background-image: url("../img/cross-small.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    cursor: pointer;
+}
