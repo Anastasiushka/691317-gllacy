@@ -1090,7 +1090,8 @@ li.full-trolley:focus polygon {
     position: absolute;
     width: 21px;
     height: 21px;
-    border-radius: 50%
+    border-radius: 50%;
+    cursor: pointer;
 }
 .first-slider{
     bottom: 45px;
