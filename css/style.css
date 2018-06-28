@@ -951,7 +951,6 @@ ul.pagination-list {
 
 html,
 body {
-    min-height: 2415px;
     margin: 0;
     padding: 0;
 }
@@ -1071,6 +1070,7 @@ li.full-trolley:focus polygon {
 
 .container {
     padding: 0;
+    display: block;
 }
 
 
@@ -1505,7 +1505,6 @@ li.full-trolley:focus polygon {
     padding: 0;
     margin: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-    min-height: 1443px;
 }
 
 .page-title {
